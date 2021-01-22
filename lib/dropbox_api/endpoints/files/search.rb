@@ -2,7 +2,11 @@
 module DropboxApi::Endpoints::Files
   class Search < DropboxApi::Endpoints::Rpc
     Method      = :post
+<<<<<<< HEAD
     Path        = '/2/files/search'
+=======
+    Path        = '/2/files/search_v2'
+>>>>>>> add search_v2 url support
     ResultType  = DropboxApi::Results::SearchResult
     ErrorType   = DropboxApi::Errors::SearchError
 
@@ -36,8 +40,8 @@ module DropboxApi::Endpoints::Files
       options[:mode] ||= :filename
 
       perform_request options.merge({
-        query: query,
-        path: path
+          query: query,
+          path: path
       })
     end
   end
