@@ -20,14 +20,11 @@ module DropboxApi::Endpoints
       response = get_response(params)
       api_result = process_response response
 
-      # TODO: Stream response, current implementation will fail with very large
-      #       files.
+      # We just yield the whole response to the block, it'd be nice in the
+      # future to support an interface that streams the response in chunks.
       yield response.body if block_given?
 
       api_result
     end
   end
 end
-# TODO:
-#  1. Combine ContentDownload and ContentUpload to share its initialize method.
-#  2. Reorganize the methods which create the request.
