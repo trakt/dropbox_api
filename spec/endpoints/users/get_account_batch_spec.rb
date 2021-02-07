@@ -18,7 +18,7 @@ describe DropboxApi::Client, '#get_account_batch' do
     end
   end
 
-  it "raises an error if one account can't e found", cassette: 'get_account_batch/no_account' do
+  it 'raises an error if one account cannot be found', cassette: 'get_account_batch/no_account' do
     account_ids = %w(
       dbid:AAAKVPLEKkkccsZMFkkZNXFeyXrPPhrtXXX
       dbid:AAAKVPLEKkkccsZMFkkZNXFeyXrPPhrtFxs
