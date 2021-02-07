@@ -68,7 +68,7 @@ API call | Status
 `/restore` | 🌕
 `/save_url` | 🌕
 `/save_url/check_job_status` | 🌕
-`/search` | 🌔
+`/search_v2` | 🌔
 `/upload` | 🌕
 `/upload_session/append` | alias?
 `/upload_session/append_v2` | 🌕
