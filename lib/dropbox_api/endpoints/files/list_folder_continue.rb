@@ -1,10 +1,11 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class ListFolderContinue < DropboxApi::Endpoints::Rpc
     # NOTE: This hasn't been tested with real data, I couldn't make a query
     #       long enough to enable the `has_more` attribute in the
     #       `ListFolderResult`.
     Method      = :post
-    Path        = "/2/files/list_folder/continue".freeze
+    Path        = '/2/files/list_folder/continue'
     ResultType  = DropboxApi::Results::ListFolderResult
     ErrorType   = DropboxApi::Errors::ListFolderContinueError
 
@@ -14,7 +15,7 @@ module DropboxApi::Endpoints::Files
     # @param cursor [String] The cursor returned by your last call to
     #   list_folder or list_folder_continue.
     add_endpoint :list_folder_continue do |cursor|
-      perform_request :cursor => cursor
+      perform_request cursor: cursor
     end
   end
 end

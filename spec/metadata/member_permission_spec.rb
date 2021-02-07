@@ -1,12 +1,13 @@
+# frozen_string_literal: true
 context DropboxApi::Metadata::MemberPermission do
-  it "can be initialized from a hash" do
+  it 'can be initialized from a hash' do
     hash = {
-      "action" => {
-        ".tag" => "remove"
+      'action' => {
+        '.tag' => 'remove'
       },
-      "allow" => false,
-      "reason" => {
-        ".tag" => "target_is_self"
+      'allow' => false,
+      'reason' => {
+        '.tag' => 'target_is_self'
       }
     }
 

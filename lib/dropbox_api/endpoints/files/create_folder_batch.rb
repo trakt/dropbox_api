@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class CreateFolderBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/create_folder_batch".freeze
+    Path        = '/2/files/create_folder_batch'
     ResultType  = DropboxApi::Results::CreateFolderBatchResult
 
     include DropboxApi::OptionsValidator
@@ -33,7 +34,7 @@ module DropboxApi::Endpoints::Files
       options[:force_async] ||= false
 
       perform_request(options.merge({
-        :paths => paths
+        paths: paths
       }))
     end
   end

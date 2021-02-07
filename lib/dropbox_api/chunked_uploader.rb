@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   class ChunkedUploader
     include DropboxApi::OptionsValidator
@@ -13,7 +14,7 @@ module DropboxApi
 
     def start
       chunk = @i_stream.read @chunk_size
-      chunk = "" if chunk.nil?
+      chunk = '' if chunk.nil?
 
       @cursor = @client.upload_session_start chunk
     end

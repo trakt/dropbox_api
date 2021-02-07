@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   module OptionsValidator
     # Takes in a list of valid option keys and a hash of options. If one of the

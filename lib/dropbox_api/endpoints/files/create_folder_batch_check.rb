@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class CreateFolderBatchCheck < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/create_folder_batch/check".freeze
+    Path        = '/2/files/create_folder_batch/check'
     ResultType  = DropboxApi::Results::CreateFolderBatchResult
     ErrorType   = DropboxApi::Errors::PollError
 
@@ -14,7 +15,7 @@ module DropboxApi::Endpoints::Files
     # @return [Array] A list of one result for each entry.
     add_endpoint :create_folder_batch_check do |async_job_id|
       perform_request({
-        :async_job_id => async_job_id
+        async_job_id: async_job_id
       })
     end
   end

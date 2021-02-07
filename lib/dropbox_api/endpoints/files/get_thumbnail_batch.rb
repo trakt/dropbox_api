@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class GetThumbnailBatch < DropboxApi::Endpoints::RpcContent
     Method      = :post
-    Path        = "/2/files/get_thumbnail_batch".freeze
+    Path        = '/2/files/get_thumbnail_batch'
     ResultType  = DropboxApi::Results::GetThumbnailBatchResult
     ErrorType   = DropboxApi::Errors::ThumbnailBatchError
 
@@ -25,12 +26,12 @@ module DropboxApi::Endpoints::Files
       options[:size] ||= :w64h64
       options[:mode] ||= :strict
 
-      perform_request :entries => build_entries_params(paths, options)
+      perform_request entries: build_entries_params(paths, options)
     end
 
     def build_entries_params(paths, options)
       paths.map do |path|
-        options.merge({ :path => path })
+        options.merge({ path: path })
       end
     end
 

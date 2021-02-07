@@ -1,14 +1,15 @@
-inherit_from: .rubocop_todo.yml
+AllCops:
+  DisabledByDefault: true
 
 Style/HashSyntax:
   Enabled: true
-  EnforcedStyle: 'hash_rockets'
+  EnforcedStyle: 'ruby19'
 
-Style/ClassAndModuleChildren:
-  Enabled: false
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always_true
 
-Style/Documentation:
-  Enabled: false
+Style/RedundantFreeze:
+  Enabled: true
 
-Naming/ConstantName:
-  Enabled: false
+Style/StringLiterals:
+  EnforcedStyle: single_quotes

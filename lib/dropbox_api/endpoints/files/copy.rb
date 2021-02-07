@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class Copy < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/copy".freeze
+    Path        = '/2/files/copy'
     ResultType  = DropboxApi::Metadata::Resource
     ErrorType   = DropboxApi::Errors::RelocationError
 
@@ -13,8 +14,8 @@ module DropboxApi::Endpoints::Files
     # @return The moved file.
     add_endpoint :copy do |from, to|
       perform_request({
-        :from_path => from,
-        :to_path => to
+        from_path: from,
+        to_path: to
       })
     end
   end

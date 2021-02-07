@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class ListFolderGetLatestCursor < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/list_folder/get_latest_cursor".freeze
+    Path        = '/2/files/list_folder/get_latest_cursor'
     ResultType  = DropboxApi::Results::ListFolderGetLatestCursorResult
     ErrorType   = DropboxApi::Errors::ListFolderError
 

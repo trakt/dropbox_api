@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class Search < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/search".freeze
+    Path        = '/2/files/search'
     ResultType  = DropboxApi::Results::SearchResult
     ErrorType   = DropboxApi::Errors::SearchError
 
@@ -24,7 +25,7 @@ module DropboxApi::Endpoints::Files
     # @option options mode [:filename, :filename_and_content, :deleted_filename]
     #   The search mode. Note that searching file content is only
     #   available for Dropbox Business accounts. The default is filename.
-    add_endpoint :search do |query, path = "", options = {}|
+    add_endpoint :search do |query, path = '', options = {}|
       validate_options([
         :start,
         :max_results,
@@ -35,8 +36,8 @@ module DropboxApi::Endpoints::Files
       options[:mode] ||= :filename
 
       perform_request options.merge({
-        :query => query,
-        :path => path
+        query: query,
+        path: path
       })
     end
   end

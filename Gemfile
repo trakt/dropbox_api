@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 
 gemspec
@@ -5,9 +6,9 @@ gemspec
 group :development do
   # Documentation
   gem 'redcarpet'
-  gem 'yard-tests-rspec', :git => "https://github.com/Jesus/yard-spec-plugin.git"
+  gem 'yard-tests-rspec', git: 'https://github.com/Jesus/yard-spec-plugin.git'
 
   # Code linting
-  gem 'rubocop', :require => false
-  gem 'rubocop-rspec', :require => false
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
 end

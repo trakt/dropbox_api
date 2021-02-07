@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Errors
   class BasicError < StandardError
     def initialize(message, metadata)
@@ -18,7 +19,7 @@ module DropboxApi::Errors
 
       def find_subtype(metadata)
         if defined? self::ErrorSubtypes
-          discriminator = metadata[".tag"]
+          discriminator = metadata['.tag']
           metadata = metadata[discriminator] unless metadata[discriminator].nil?
           [self::ErrorSubtypes[discriminator.to_sym], metadata]
         else

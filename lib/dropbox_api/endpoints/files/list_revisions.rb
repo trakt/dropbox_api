@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class ListRevisions < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/list_revisions".freeze
+    Path        = '/2/files/list_revisions'
     ResultType  = DropboxApi::Results::ListRevisionsResult
     ErrorType   = DropboxApi::Errors::ListRevisionsError
 
@@ -19,7 +20,7 @@ module DropboxApi::Endpoints::Files
       options[:limit] ||= 10
 
       perform_request options.merge({
-        :path => path
+        path: path
       })
     end
   end

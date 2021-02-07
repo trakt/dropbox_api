@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   describe Client do
     it 'can have custom connection middleware' do
@@ -23,7 +24,7 @@ module DropboxApi
       end
 
       # Workaround the API changes Faraday introduced in 1.0 :(
-      if Faraday::VERSION.start_with? "0."
+      if Faraday::VERSION.start_with? '0.'
         expect(connection.builder.handlers).to eq [
           MiddlewareStart,
           MiddlewareMiddle,

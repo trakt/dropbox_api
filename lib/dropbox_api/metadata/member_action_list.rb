@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   class MemberActionList < Array
     # Builds a list of actions for a shared folder.

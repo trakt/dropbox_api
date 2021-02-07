@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   class SharedLink < Base
     VALID_KEYS = [:url, :password]
@@ -6,7 +7,7 @@ module DropboxApi::Metadata
       @shared_link =
         case param
         when String
-          {:url => param}
+          {url: param}
         when Hash
           param
         end
@@ -16,7 +17,7 @@ module DropboxApi::Metadata
 
     def check_validity
       if @shared_link[:url].nil?
-        raise ArgumentError, "Missing `:url` option"
+        raise ArgumentError, 'Missing `:url` option'
       end
 
       @shared_link.keys.each do |key|

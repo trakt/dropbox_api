@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # This class is useful to set up an existing Dropbox account in a state which
 # is ready to pass the tests.
 #
@@ -41,7 +42,7 @@ class DropboxScaffoldBuilder
     File.expand_path('../../fixtures', __FILE__)
   end
 
-  PREFIX = "/dropbox_api_fixtures"
+  PREFIX = '/dropbox_api_fixtures'
 
   def initialize(endpoint_name)
     @endpoint_name = endpoint_name.to_s
@@ -62,16 +63,16 @@ class DropboxScaffoldBuilder
   end
 
   def build_copy_batch
-    client.upload("#{path_prefix}/regular_file.txt", "Che primo! aon vas?")
-    client.upload("#{path_prefix}/regular_file_2.txt", "Pal Calvari, amic")
+    client.upload("#{path_prefix}/regular_file.txt", 'Che primo! aon vas?')
+    client.upload("#{path_prefix}/regular_file_2.txt", 'Pal Calvari, amic')
   end
 
   def build_create_file_request
-    client.upload("#{path_prefix}/regular_file.txt", "Arkansas, dude.")
+    client.upload("#{path_prefix}/regular_file.txt", 'Arkansas, dude.')
   end
 
   def build_delete
-    file_contents = "Tijuana, amigo."
+    file_contents = 'Tijuana, amigo.'
 
     client.upload "#{path_prefix}/will_be_deleted.txt", file_contents
     client.upload "#{path_prefix}/wont_be_deleted.txt", file_contents
@@ -80,18 +81,18 @@ class DropboxScaffoldBuilder
   end
 
   def build_get_metadata
-    client.upload("#{path_prefix}/file.txt", "This is a test file.", {
-      :client_modified => Time.new(1988, 12, 8, 1, 1, 0, "+00:00")
+    client.upload("#{path_prefix}/file.txt", 'This is a test file.', {
+      client_modified: Time.new(1988, 12, 8, 1, 1, 0, '+00:00')
     })
     client.create_folder("#{path_prefix}/folder")
-    client.upload("#{path_prefix}/deleted_file.txt", "This is a test file.")
+    client.upload("#{path_prefix}/deleted_file.txt", 'This is a test file.')
     client.delete("#{path_prefix}/deleted_file.txt")
   end
 
   def build_list_folder
     client.create_folder("#{path_prefix}/shared_folder")
     client.create_shared_link_with_settings("#{path_prefix}/shared_folder")
-    client.upload("#{path_prefix}/shared_folder/cow.txt", "Moo.")
+    client.upload("#{path_prefix}/shared_folder/cow.txt", 'Moo.')
   end
 
   def build_upload
@@ -103,7 +104,7 @@ class DropboxScaffoldBuilder
   end
 
   def build_get_thumbnail_batch
-    file_content = IO.read File.join(self.class.fixtures_path, "img.png")
+    file_content = IO.read File.join(self.class.fixtures_path, 'img.png')
     client.upload("#{path_prefix}/img.png", file_content)
   end
 
@@ -111,7 +112,7 @@ class DropboxScaffoldBuilder
     client.create_folder("#{path_prefix}/shared_folder")
     client.create_shared_link_with_settings("#{path_prefix}/shared_folder")
 
-    client.upload("#{path_prefix}/shared_file.txt", "I shall be shared.")
+    client.upload("#{path_prefix}/shared_file.txt", 'I shall be shared.')
     client.create_shared_link_with_settings("#{path_prefix}/shared_file.txt")
   end
 

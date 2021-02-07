@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Sharing
   class ShareFolder < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/sharing/share_folder".freeze
+    Path        = '/2/sharing/share_folder'
     ResultType  = DropboxApi::Results::ShareFolderLaunch
     ErrorType   = DropboxApi::Errors::ShareFolderError
 
@@ -47,7 +48,7 @@ module DropboxApi::Endpoints::Sharing
 
       begin
         perform_request options.merge({
-          :path => path
+          path: path
         })
       rescue DropboxApi::Errors::AlreadySharedError => error
         error.shared_folder

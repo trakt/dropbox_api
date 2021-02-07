@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Sharing
   class RevokeSharedLink < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/sharing/revoke_shared_link".freeze
+    Path        = '/2/sharing/revoke_shared_link'
     ResultType  = DropboxApi::Results::VoidResult
     ErrorType   = DropboxApi::Errors::RevokeSharedLinkError
 
@@ -16,7 +17,7 @@ module DropboxApi::Endpoints::Sharing
 
     add_endpoint :revoke_shared_link do |url|
       perform_request({
-        :url => url
+        url: url
       })
     end
   end

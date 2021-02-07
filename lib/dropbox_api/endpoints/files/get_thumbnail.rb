@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class GetThumbnail < DropboxApi::Endpoints::ContentDownload
     Method      = :post
-    Path        = "/2/files/get_thumbnail".freeze
+    Path        = '/2/files/get_thumbnail'
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::PreviewError
 
@@ -50,7 +51,7 @@ module DropboxApi::Endpoints::Files
       options[:size] ||= :w64h64
 
       perform_request(options.merge({
-        :path => path
+        path: path
       }), &block)
     end
   end

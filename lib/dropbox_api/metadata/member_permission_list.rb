@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   # This represents a collection of permissions on allowed on a
   # shared file or folder.

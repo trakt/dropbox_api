@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class Upload < DropboxApi::Endpoints::ContentUpload
     Method      = :post
-    Path        = "/2/files/upload".freeze
+    Path        = '/2/files/upload'
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::UploadError
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module YARD
   class EndpointHandler < Handlers::Ruby::MethodHandler
     handles method_call(:add_endpoint)
@@ -8,7 +9,7 @@ module YARD
         CodeObjects::MethodObject.new(namespace, name) do |m|
           m.parameters = parameters
         end,
-        CodeObjects::MethodObject.new(P("DropboxApi::Client"), name) do |m|
+        CodeObjects::MethodObject.new(P('DropboxApi::Client'), name) do |m|
           m.parameters = parameters
           m.group = namespace.namespace.name.downcase
         end

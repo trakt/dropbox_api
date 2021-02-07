@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class CopyBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/copy_batch_v2".freeze
+    Path        = '/2/files/copy_batch_v2'
     ResultType  = DropboxApi::Results::CopyBatchResult
 
     include DropboxApi::OptionsValidator
@@ -28,7 +29,7 @@ module DropboxApi::Endpoints::Files
       options[:autorename] ||= false
 
       perform_request(options.merge({
-        :entries => entries
+        entries: entries
       }))
     end
   end

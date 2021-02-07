@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Users
   class GetAccountBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/users/get_account_batch".freeze
+    Path        = '/2/users/get_account_batch'
     ResultType  = DropboxApi::Results::BasicAccountBatch
     ErrorType   = DropboxApi::Errors::GetAccountError
 
@@ -12,7 +13,7 @@ module DropboxApi::Endpoints::Users
     #   contain any duplicate account IDs.
     # @return [Array<BasicAccount>] Basic information about any account.
     add_endpoint :get_account_batch do |account_ids|
-      perform_request :account_ids => account_ids
+      perform_request account_ids: account_ids
     end
   end
 end

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   class Tag < DropboxApi::Metadata::Base
     def self.new(data)
@@ -5,7 +6,7 @@ module DropboxApi::Metadata
       when ::Symbol
         validate(data)
       when Hash
-        new(data[".tag"].to_sym)
+        new(data['.tag'].to_sym)
       when String
         new(data.to_sym)
       else

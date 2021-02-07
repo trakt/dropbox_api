@@ -1,21 +1,22 @@
+# frozen_string_literal: true
 describe DropboxApi::Endpoints::ContentUpload do
-  subject { described_class.new(DropboxApi::ConnectionBuilder.new("bearer")) }
+  subject { described_class.new(DropboxApi::ConnectionBuilder.new('bearer')) }
 
   context 'Content-Length header' do
     context 'for String body' do
-      it "is calculated and appended to headers" do
+      it 'is calculated and appended to headers' do
         body = IO.read(File.expand_path "#{__FILE__}/../../fixtures/img.png")
 
         _, headers = subject.build_request({}, body)
 
-        expect(headers['Content-Length']).to eq("3975")
+        expect(headers['Content-Length']).to eq('3975')
       end
     end
 
     context 'for File body' do
-      it "is calculated and appended to headers" do
+      it 'is calculated and appended to headers' do
         begin
-          content = "tested content"
+          content = 'tested content'
           file = Tempfile.new('dropbox_api')
           file << content
 
@@ -34,7 +35,7 @@ describe DropboxApi::Endpoints::ContentUpload do
 
         _, headers = subject.build_request({}, body)
 
-        expect(headers).to_not have_key("Content-Length")
+        expect(headers).to_not have_key('Content-Length')
       end
     end
   end

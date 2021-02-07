@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   # Example of a serialized FileMemberAction:
   #
@@ -12,7 +13,7 @@ module DropboxApi::Metadata
   class FileMemberAction < Base
     class << self
       def new(data)
-        tag = data[".tag"]
+        tag = data['.tag']
         class_for(tag.to_sym).new(data[tag])
       end
 

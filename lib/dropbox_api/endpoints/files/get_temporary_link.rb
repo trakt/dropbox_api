@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class GetTemporaryLink < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/get_temporary_link".freeze
+    Path        = '/2/files/get_temporary_link'
     ResultType  = DropboxApi::Results::GetTemporaryLinkResult
     ErrorType   = DropboxApi::Errors::GetMetadataError
 
@@ -11,7 +12,7 @@ module DropboxApi::Endpoints::Files
     #
     # @param path [String] The path to the file you want a temporary link to.
     add_endpoint :get_temporary_link do |path|
-      perform_request({:path => path})
+      perform_request({path: path})
     end
   end
 end

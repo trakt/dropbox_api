@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Users
   class GetSpaceUsage < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/users/get_space_usage".freeze
+    Path        = '/2/users/get_space_usage'
     ResultType  = DropboxApi::Metadata::SpaceUsage
     ErrorType   = nil
 

@@ -1,7 +1,8 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Sharing
   class ListFolderMembers < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/sharing/list_folder_members".freeze
+    Path        = '/2/sharing/list_folder_members'
     ResultType  = DropboxApi::Results::SharedFolderMembers
     ErrorType   = DropboxApi::Errors::SharedFolderAccessError
 
@@ -31,8 +32,8 @@ module DropboxApi::Endpoints::Sharing
       options[:limit] ||= 100
 
       perform_request options.merge({
-        :shared_folder_id => folder_id,
-        :actions => DropboxApi::Metadata::MemberActionList.new(actions)
+        shared_folder_id: folder_id,
+        actions: DropboxApi::Metadata::MemberActionList.new(actions)
       })
     end
   end

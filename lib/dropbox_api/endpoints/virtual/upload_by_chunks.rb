@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   class Client
     # Creates a new file using the *upload session* endpoints. You can use
