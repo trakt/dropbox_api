@@ -147,15 +147,17 @@ This can be done using the middlewere layer as per the below:
 ```ruby
 client = DropboxApi::Client.new("VofXAX8D...")
 #=> #<DropboxApi::Client ...>
-namespace_id = client.get_current_account.root_info.root_namespace_id
-client.middleware.prepend do |connection|
-  connection.headers['Dropbox-API-Path-Root'] = "{\".tag\": \"namespace_id\", \"namespace_id\": \"#{namespace_id}\"}"
-end
+client.namespace_id = client.get_current_account.root_info.root_namespace_id
 
 client.list_folder('')
 #=> Now returns the team folders
 ```
 
+You could unset the namespace ID at any point afterwards with just:
+
+```ruby
+client.namespace_id = nil
+```
 
 ## Dependencies
 
