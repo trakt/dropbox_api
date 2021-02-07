@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   class Tag < DropboxApi::Metadata::Base
     def self.new(data)

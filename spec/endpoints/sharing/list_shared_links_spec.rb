@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#list_shared_links" do
   before :each do
     @client = DropboxApi::Client.new

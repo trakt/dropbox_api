@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#get_shared_link_metadata" do
   let(:path_prefix) {
     DropboxScaffoldBuilder.prefix_for :get_shared_link_metadata

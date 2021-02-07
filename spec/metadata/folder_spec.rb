@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 context DropboxApi::Metadata::Folder do
   it "can be initialized from a hash" do
     folder_hash = {

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   class SaveUrlJobStatus < DropboxApi::Results::Base
     def self.new(result_data)

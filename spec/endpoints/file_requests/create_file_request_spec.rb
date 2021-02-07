@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#create_file_request" do
   let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :create_file_request }
   before :each do

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 context DropboxApi::Metadata::Resource do
   context "with metadata from a file" do
     it "initializes a File" do

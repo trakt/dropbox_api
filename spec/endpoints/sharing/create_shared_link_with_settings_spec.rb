@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#create_shared_link_with_settings" do
   before :each do
     @client = DropboxApi::Client.new

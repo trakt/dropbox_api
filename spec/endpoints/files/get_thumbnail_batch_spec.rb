@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#get_thumbnail_batch" do
   let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :get_thumbnail_batch }
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#copy_reference_save" do
   before :each do
     @client = DropboxApi::Client.new

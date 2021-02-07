@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#copy_batch" do
   let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :copy_batch }
   before :each do

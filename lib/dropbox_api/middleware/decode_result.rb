@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::MiddleWare
   class DecodeResult < Faraday::Middleware
     def call(rq_env)

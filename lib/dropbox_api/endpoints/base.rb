@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints
   class Base
     def self.add_endpoint(name, &block)

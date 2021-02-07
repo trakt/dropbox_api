@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   class ConnectionBuilder
     def initialize(oauth_bearer)

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#list_folder" do
   let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :list_folder }
   before :each do

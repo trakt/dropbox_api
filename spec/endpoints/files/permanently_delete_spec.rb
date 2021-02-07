@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#permanently_delete" do
   let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :permanently_delete }
   before :each do

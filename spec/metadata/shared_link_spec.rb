@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Metadata::SharedLink do
   describe "#to_hash" do
     it "works with a string URL" do

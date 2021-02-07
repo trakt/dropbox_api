@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 context DropboxApi::Metadata::File do
   def build_file_hash(attrs = {})
     {

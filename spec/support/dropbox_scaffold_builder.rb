@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # This class is useful to set up an existing Dropbox account in a state which
 # is ready to pass the tests.
 #

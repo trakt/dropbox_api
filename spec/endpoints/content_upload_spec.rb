@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Endpoints::ContentUpload do
   subject { described_class.new(DropboxApi::ConnectionBuilder.new("bearer")) }
 

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#upload" do
   let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :upload_by_chunks }
   before :each do

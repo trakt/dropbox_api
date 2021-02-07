@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   class SaveUrlResult < DropboxApi::Results::Base
     # Example with an async job:

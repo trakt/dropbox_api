@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#unshare_file" do
   before :each do
     @client = DropboxApi::Client.new

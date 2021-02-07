@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module YARD
   class EndpointHandler < Handlers::Ruby::MethodHandler
     handles method_call(:add_endpoint)

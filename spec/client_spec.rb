@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   describe Client do
     it 'can have custom connection middleware' do

@@ -1,4 +1,5 @@
 #encoding: utf-8
+# frozen_string_literal: true
 describe DropboxApi::Client, "#upload_session_append_v2" do
   before :each do
     @client = DropboxApi::Client.new

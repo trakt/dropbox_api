@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Users
   class GetCurrentAccount < DropboxApi::Endpoints::Rpc
     Method      = :post

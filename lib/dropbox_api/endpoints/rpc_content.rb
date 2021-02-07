@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints
   class RpcContent < DropboxApi::Endpoints::Rpc
     def initialize(builder)

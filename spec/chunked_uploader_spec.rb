@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   describe ChunkedUploader do
     let(:path_prefix) { DropboxScaffoldBuilder.prefix_for :chunked_uploader }

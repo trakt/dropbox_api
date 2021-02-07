@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints
   class ContentDownload < DropboxApi::Endpoints::Base
     def initialize(builder)

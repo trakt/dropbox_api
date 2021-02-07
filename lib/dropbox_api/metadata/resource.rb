@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   # This class is used as an adapter so we can create an object of the pertinent
   # class when we need to infer the type from the data.

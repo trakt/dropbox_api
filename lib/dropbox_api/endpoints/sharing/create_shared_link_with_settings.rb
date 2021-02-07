@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Sharing
   class CreateSharedLinkWithSettings < DropboxApi::Endpoints::Rpc
     Method      = :post

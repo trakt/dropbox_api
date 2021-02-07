@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   class SearchResult < DropboxApi::Results::Base
     # A list (possibly empty) of matches for the query.

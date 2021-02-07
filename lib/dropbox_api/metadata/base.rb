@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   class Base
     class << self

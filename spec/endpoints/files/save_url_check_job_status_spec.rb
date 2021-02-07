@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#save_url_check_job_status" do
   before :each do
     @client = DropboxApi::Client.new

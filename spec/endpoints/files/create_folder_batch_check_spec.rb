@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#create_folder_batch_check" do
   before :each do
     @client = DropboxApi::Client.new

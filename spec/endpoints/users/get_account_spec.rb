@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#get_account" do
   before :each do
     @client = DropboxApi::Client.new

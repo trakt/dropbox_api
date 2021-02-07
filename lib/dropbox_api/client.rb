@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi
   class Client
     def initialize(oauth_bearer = ENV["DROPBOX_OAUTH_BEARER"])

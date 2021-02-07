@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Metadata::CommitInfo do
   it "can be initialized from a Hash" do
     commit_info_hash = {

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   class ListRevisionsResult < DropboxApi::Results::Base
     # A collection of files and directories.

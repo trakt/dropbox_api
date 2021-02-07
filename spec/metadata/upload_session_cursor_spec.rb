@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Metadata::UploadSessionCursor do
   it "can be initialized from a Hash" do
     cursor_hash = {

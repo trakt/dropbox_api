@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   # Result returned by {Client#copy_batch} or {Client#move_batch} that may
   # either launch an asynchronous job or complete synchronously.

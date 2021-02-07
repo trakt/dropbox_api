@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Metadata::WriteMode do
   describe "#to_hash" do
     it "works with :add as parameter" do

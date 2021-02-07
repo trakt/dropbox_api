@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 YARD::Templates::Engine.register_template_path File.expand_path("#{__FILE__}/../templates")
 
 class RSpecDescribeHandler < YARD::Handlers::Ruby::Base

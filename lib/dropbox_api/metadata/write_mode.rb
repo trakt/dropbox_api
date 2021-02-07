@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Metadata
   # Your intent when writing a file to some path. This is used to determine
   # what constitutes a conflict and what the autorename strategy is.

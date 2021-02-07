@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 describe DropboxApi::Client, "#token_revoke" do
   before :each do
     @client = DropboxApi::Client.new

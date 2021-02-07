@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Auth
   class TokenRevoke < DropboxApi::Endpoints::Rpc
     Method      = :post

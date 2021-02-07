@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Errors
   class RelocationError < BasicError
     ErrorSubtypes = {

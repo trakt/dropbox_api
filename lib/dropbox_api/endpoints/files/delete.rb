@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class Delete < DropboxApi::Endpoints::Rpc
     Method      = :post

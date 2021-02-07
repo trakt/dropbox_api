@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   class ListFolderLongpollResult < DropboxApi::Results::Base
     # Indicates whether new changes are available. If true, call

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 context DropboxApi::Metadata::MemberActionList do
   it "can be initialized from an empty Array" do
     actions = DropboxApi::Metadata::MemberActionList.new([])

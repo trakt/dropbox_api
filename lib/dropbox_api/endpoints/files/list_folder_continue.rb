@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Endpoints::Files
   class ListFolderContinue < DropboxApi::Endpoints::Rpc
     # NOTE: This hasn't been tested with real data, I couldn't make a query

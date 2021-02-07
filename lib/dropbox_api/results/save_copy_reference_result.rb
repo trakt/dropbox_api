@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module DropboxApi::Results
   class SaveCopyReferenceResult < DropboxApi::Results::Base
     # The saved file or folder in the user's Dropbox.
