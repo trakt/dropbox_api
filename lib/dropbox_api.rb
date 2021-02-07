@@ -7,12 +7,13 @@ require 'faraday'
 
 require 'dropbox_api/authenticator'
 
+require 'dropbox_api/metadata/base'
+require 'dropbox_api/metadata/field'
+require 'dropbox_api/metadata/namespace_id'
+
 require 'dropbox_api/middleware/decode_result'
 require 'dropbox_api/middleware/path_root'
 require 'dropbox_api/middleware/stack'
-
-require 'dropbox_api/metadata/field'
-require 'dropbox_api/metadata/base'
 
 require 'dropbox_api/metadata/tag'
 require 'dropbox_api/metadata/access_level'

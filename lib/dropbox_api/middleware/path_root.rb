@@ -16,10 +16,17 @@ module DropboxApi::MiddleWare
       end
     end
 
+    def namespace_id_header_value
+      JSON.dump(
+        DropboxApi::Metadata::NamespaceId.new({
+          'namespace_id' => namespace_id
+        })
+      )
+    end
+
     def call(env)
       if !namespace_id.nil?
-        # TODO serialize properly...
-        env[:request_headers][HEADER_NAME] ||= "{\".tag\": \"namespace_id\", \"namespace_id\": \"#{namespace_id}\"}"
+        env[:request_headers][HEADER_NAME] ||= namespace_id_header_value
       end
 
       @app.call env
