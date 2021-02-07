@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Endpoints::ContentDownload
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Endpoints::ContentDownload";
   relpath = '../../';
 </script>
@@ -217,7 +217,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of ContentDownload</p>
+    <p>Returns a new instance of ContentDownload.</p>
 
 
   </div>
@@ -232,17 +232,17 @@
       <pre class="lines">
 
 
-3
 4
 5
 6
-7</pre>
+7
+8</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/content_download.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/content_download.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_builder'>builder</span><span class='rparen'>)</span>
-  <span class='ivar'>@connection</span> <span class='op'>=</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>https://content.dropboxapi.com</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
+  <span class='ivar'>@connection</span> <span class='op'>=</span> <span class='id identifier rubyid_builder'>builder</span><span class='period'>.</span><span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://content.dropboxapi.com</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_c'>c</span><span class='op'>|</span>
     <span class='id identifier rubyid_c'>c</span><span class='period'>.</span><span class='id identifier rubyid_response'>response</span> <span class='symbol'>:decode_result</span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
@@ -274,7 +274,6 @@
       <pre class="lines">
 
 
-9
 10
 11
 12
@@ -282,10 +281,11 @@
 14
 15
 16
-17</pre>
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/content_download.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/content_download.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build_request'>build_request</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_body'>body</span> <span class='op'>=</span> <span class='kw'>nil</span>
@@ -339,7 +339,6 @@
       <pre class="lines">
 
 
-19
 20
 21
 22
@@ -348,17 +347,18 @@
 25
 26
 27
-28</pre>
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/content_download.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/content_download.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_perform_request'>perform_request</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_response'>response</span> <span class='op'>=</span> <span class='id identifier rubyid_get_response'>get_response</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_api_result'>api_result</span> <span class='op'>=</span> <span class='id identifier rubyid_process_response'>process_response</span> <span class='id identifier rubyid_response'>response</span>
 
-  <span class='comment'># TODO: Stream response, current implementation will fail with very large
-</span>  <span class='comment'>#       files.
+  <span class='comment'># We just yield the whole response to the block, it&#39;d be nice in the
+</span>  <span class='comment'># future to support an interface that streams the response in chunks.
 </span>  <span class='kw'>yield</span> <span class='id identifier rubyid_response'>response</span><span class='period'>.</span><span class='id identifier rubyid_body'>body</span> <span class='kw'>if</span> <span class='id identifier rubyid_block_given?'>block_given?</span>
 
   <span class='id identifier rubyid_api_result'>api_result</span>
@@ -373,9 +373,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:34 2019 by
+  Generated on Sun Feb  7 11:51:57 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

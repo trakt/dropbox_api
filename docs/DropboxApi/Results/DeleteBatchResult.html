@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Results::DeleteBatchResult
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Results::DeleteBatchResult";
   relpath = '../../';
 </script>
@@ -193,7 +193,6 @@ asynchronous job or complete synchronously.</p>
       <pre class="lines">
 
 
-7
 8
 9
 10
@@ -204,17 +203,18 @@ asynchronous job or complete synchronously.</p>
 15
 16
 17
-18</pre>
+18
+19</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/results/delete_batch_result.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/results/delete_batch_result.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='kw'>self</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_result_data'>result_data</span><span class='rparen'>)</span>
-  <span class='kw'>case</span> <span class='id identifier rubyid_result_data'>result_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.tag</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>async_job_id</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>case</span> <span class='id identifier rubyid_result_data'>result_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.tag</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>async_job_id</span><span class='tstring_end'>&#39;</span></span>
     <span class='id identifier rubyid_result_data'>result_data</span>
-  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>complete</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_result_data'>result_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>entries</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
+  <span class='kw'>when</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>complete</span><span class='tstring_end'>&#39;</span></span>
+    <span class='id identifier rubyid_result_data'>result_data</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>entries</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_entry'>entry</span><span class='op'>|</span>
       <span class='const'><span class='object_link'><a href="../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Results.html" title="DropboxApi::Results (module)">Results</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="DeleteBatchResultEntry.html" title="DropboxApi::Results::DeleteBatchResultEntry (class)">DeleteBatchResultEntry</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="DeleteBatchResultEntry.html#new-class_method" title="DropboxApi::Results::DeleteBatchResultEntry.new (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_entry'>entry</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
   <span class='kw'>else</span>
@@ -231,9 +231,9 @@ asynchronous job or complete synchronously.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:35 2019 by
+  Generated on Sun Feb  7 11:51:57 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

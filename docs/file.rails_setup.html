@@ -6,15 +6,15 @@
 <title>
   File: Rails setup
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "rails_setup";
   relpath = '';
 </script>
@@ -57,7 +57,7 @@
         <div class="clear"></div>
       </div>
 
-      <div id="content"><div id='filecontents'><h1>Standard OAuth 2 flow set up</h1>
+      <div id="content"><div id='filecontents'><h1 id="standard-oauth-2-flow-set-up">Standard OAuth 2 flow set up</h1>
 
 <p>This document describes how to implement the OAuth2 flow in a Rails
 application, the process is represented in the following diagram:</p>
@@ -66,7 +66,7 @@ application, the process is represented in the following diagram:</p>
 
 <p>Source: <a href="https://www.dropbox.com/developers/reference/oauth-guide#oauth-2-on-the-web">https://www.dropbox.com/developers/reference/oauth-guide#oauth-2-on-the-web</a></p>
 
-<h2>1. Set up some new routes</h2>
+<h2 id="1-set-up-some-new-routes">1. Set up some new routes</h2>
 
 <p>You&#39;ll have to create a couple of new routes:</p>
 
@@ -80,7 +80,7 @@ will redirect to Dropbox.</p>
 <p>The other route, <code>dropbox/auth_callback</code>, will process the authentication token
 that we&#39;ll receive from Dropbox. Steps 4 &amp; 5.</p>
 
-<h2>2. Set up a Dropbox controller</h2>
+<h2 id="2-set-up-a-dropbox-controller">2. Set up a Dropbox controller</h2>
 
 <pre class="code ruby"><code class="ruby"><span class='kw'>class</span> <span class='const'>DropboxController</span> <span class='op'>&lt;</span> <span class='const'>ApplicationController</span>
   <span class='comment'># Example call:
@@ -121,7 +121,7 @@ that we&#39;ll receive from Dropbox. Steps 4 &amp; 5.</p>
 <span class='kw'>end</span>
 </code></pre>
 
-<h2>3. Set up redirect URI in your Dropbox app settings</h2>
+<h2 id="3-set-up-redirect-uri-in-your-dropbox-app-settings">3. Set up redirect URI in your Dropbox app settings</h2>
 
 <p>In the previous code, you probably noticed that we&#39;re providing a <code>redirect_uri</code>
 parameter. This is where the user will be redirected to after accepting our
@@ -142,9 +142,9 @@ settings.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:31 2019 by
+  Generated on Sun Feb  7 11:51:54 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

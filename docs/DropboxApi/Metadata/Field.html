@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Metadata::Field
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Metadata::Field";
   relpath = '../../';
 </script>
@@ -200,7 +200,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Field</p>
+    <p>Returns a new instance of Field.</p>
 
 
   </div>
@@ -215,13 +215,13 @@
       <pre class="lines">
 
 
-3
 4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/metadata/field.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/metadata/field.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_type'>type</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span><span class='rparen'>)</span>
   <span class='ivar'>@type</span> <span class='op'>=</span> <span class='id identifier rubyid_type'>type</span>
@@ -255,17 +255,17 @@
       <pre class="lines">
 
 
-8
 9
 10
 11
 12
 13
 14
-15</pre>
+15
+16</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/metadata/field.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/metadata/field.rb', line 9</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_cast'>cast</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
@@ -296,7 +296,6 @@
       <pre class="lines">
 
 
-17
 18
 19
 20
@@ -314,10 +313,13 @@
 32
 33
 34
-35</pre>
+35
+36
+37
+38</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/metadata/field.rb', line 17</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/metadata/field.rb', line 18</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_force_cast'>force_cast</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='ivar'>@type</span> <span class='op'>==</span> <span class='const'>String</span>
@@ -329,13 +331,15 @@
   <span class='kw'>elsif</span> <span class='ivar'>@type</span> <span class='op'>==</span> <span class='const'>Float</span>
     <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_to_f'>to_f</span>
   <span class='kw'>elsif</span> <span class='ivar'>@type</span> <span class='op'>==</span> <span class='const'>Symbol</span>
-    <span class='id identifier rubyid_object'>object</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.tag</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
+    <span class='id identifier rubyid_object'>object</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.tag</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span>
   <span class='kw'>elsif</span> <span class='ivar'>@type</span> <span class='op'>==</span> <span class='symbol'>:boolean</span>
-    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>true</span><span class='tstring_end'>&quot;</span></span>
-  <span class='kw'>elsif</span> <span class='ivar'>@type</span><span class='period'>.</span><span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='const'><span class='object_link'><a href="../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Metadata.html" title="DropboxApi::Metadata (module)">Metadata</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Base.html" title="DropboxApi::Metadata::Base (class)">Base</a></span></span>
+    <span class='id identifier rubyid_object'>object</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>true</span><span class='tstring_end'>&#39;</span></span>
+  <span class='kw'>elsif</span> <span class='ivar'>@type</span><span class='period'>.</span><span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Metadata.html" title="DropboxApi::Metadata (module)">Metadata</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Base.html" title="DropboxApi::Metadata::Base (class)">Base</a></span></span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='ivar'>@type</span><span class='period'>.</span><span class='id identifier rubyid_ancestors'>ancestors</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span><span class='lparen'>(</span><span class='const'>Array</span><span class='rparen'>)</span> <span class='op'>||</span>
+        <span class='ivar'>@type</span> <span class='op'>==</span> <span class='const'><span class='object_link'><a href="../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../Metadata.html" title="DropboxApi::Metadata (module)">Metadata</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Resource.html" title="DropboxApi::Metadata::Resource (class)">Resource</a></span></span>
     <span class='ivar'>@type</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_object'>object</span><span class='rparen'>)</span>
   <span class='kw'>else</span>
-    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Can&#39;t cast `</span><span class='embexpr_beg'>#{</span><span class='ivar'>@type</span><span class='embexpr_end'>}</span><span class='tstring_content'>`</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>NotImplementedError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Can&#39;t cast </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_object'>object</span><span class='embexpr_end'>}</span><span class='tstring_content'> to `</span><span class='embexpr_beg'>#{</span><span class='ivar'>@type</span><span class='embexpr_end'>}</span><span class='tstring_content'>`</span><span class='tstring_end'>&quot;</span></span>
   <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -348,9 +352,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:32 2019 by
+  Generated on Sun Feb  7 11:51:55 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

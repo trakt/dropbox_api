@@ -6,15 +6,15 @@
 <title>
   Exception: DropboxApi::Errors::BasicError
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Errors::BasicError";
   relpath = '../../';
 </script>
@@ -216,7 +216,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of BasicError</p>
+    <p>Returns a new instance of BasicError.</p>
 
 
   </div>
@@ -231,13 +231,13 @@
       <pre class="lines">
 
 
-3
 4
 5
-6</pre>
+6
+7</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/errors/basic_error.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/errors/basic_error.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
   <span class='ivar'>@metadata</span> <span class='op'>=</span> <span class='id identifier rubyid_metadata'>metadata</span>
@@ -271,7 +271,6 @@
       <pre class="lines">
 
 
-9
 10
 11
 12
@@ -279,10 +278,11 @@
 14
 15
 16
-17</pre>
+17
+18</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/errors/basic_error.rb', line 9</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/errors/basic_error.rb', line 10</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_build'>build</span><span class='lparen'>(</span><span class='id identifier rubyid_message'>message</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
   <span class='id identifier rubyid_subtype'>subtype</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span> <span class='op'>=</span> <span class='id identifier rubyid_find_subtype'>find_subtype</span> <span class='id identifier rubyid_metadata'>metadata</span>
@@ -314,7 +314,6 @@
       <pre class="lines">
 
 
-19
 20
 21
 22
@@ -322,14 +321,15 @@
 24
 25
 26
-27</pre>
+27
+28</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/errors/basic_error.rb', line 19</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/errors/basic_error.rb', line 20</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_find_subtype'>find_subtype</span><span class='lparen'>(</span><span class='id identifier rubyid_metadata'>metadata</span><span class='rparen'>)</span>
   <span class='kw'>if</span> <span class='kw'>defined?</span> <span class='kw'>self</span><span class='op'>::</span><span class='const'>ErrorSubtypes</span>
-    <span class='id identifier rubyid_discriminator'>discriminator</span> <span class='op'>=</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>.tag</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_discriminator'>discriminator</span> <span class='op'>=</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>.tag</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_metadata'>metadata</span> <span class='op'>=</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='id identifier rubyid_discriminator'>discriminator</span><span class='rbracket'>]</span> <span class='kw'>unless</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='lbracket'>[</span><span class='id identifier rubyid_discriminator'>discriminator</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
     <span class='lbracket'>[</span><span class='kw'>self</span><span class='op'>::</span><span class='const'>ErrorSubtypes</span><span class='lbracket'>[</span><span class='id identifier rubyid_discriminator'>discriminator</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_metadata'>metadata</span><span class='rbracket'>]</span>
   <span class='kw'>else</span>
@@ -346,9 +346,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:32 2019 by
+  Generated on Sun Feb  7 11:51:55 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

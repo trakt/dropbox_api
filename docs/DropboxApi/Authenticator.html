@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Authenticator
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Authenticator";
   relpath = '../';
 </script>
@@ -165,7 +165,7 @@
   
 </h3><div class="docstring">
   <div class="discussion">
-    <p>Returns a new instance of Authenticator</p>
+    <p>Returns a new instance of Authenticator.</p>
 
 
   </div>
@@ -180,20 +180,20 @@
       <pre class="lines">
 
 
-7
 8
 9
 10
 11
-12</pre>
+12
+13</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/authenticator.rb', line 7</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/authenticator.rb', line 8</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_secret'>client_secret</span><span class='rparen'>)</span>
   <span class='ivar'>@auth_code</span> <span class='op'>=</span> <span class='const'>OAuth2</span><span class='op'>::</span><span class='const'>Client</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_client_id'>client_id</span><span class='comma'>,</span> <span class='id identifier rubyid_client_secret'>client_secret</span><span class='comma'>,</span> <span class='lbrace'>{</span>
-    <span class='symbol'>:authorize_url</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://www.dropbox.com/oauth2/authorize</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
-    <span class='symbol'>:token_url</span> <span class='op'>=&gt;</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.dropboxapi.com/oauth2/token</span><span class='tstring_end'>&#39;</span></span>
+    <span class='label'>authorize_url:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://www.dropbox.com/oauth2/authorize</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+    <span class='label'>token_url:</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>https://api.dropboxapi.com/oauth2/token</span><span class='tstring_end'>&#39;</span></span>
   <span class='rbrace'>}</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_auth_code'>auth_code</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -207,9 +207,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:32 2019 by
+  Generated on Sun Feb  7 11:51:55 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

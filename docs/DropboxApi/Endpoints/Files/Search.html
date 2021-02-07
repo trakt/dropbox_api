@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Endpoints::Files::Search
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Endpoints::Files::Search";
   relpath = '../../../';
 </script>
@@ -125,12 +125,12 @@
         <dt id="Path-constant" class="">Path =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/2/files/search</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/2/files/search_v2</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="ResultType-constant" class="">ResultType =
           
         </dt>
-        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results.html" title="DropboxApi::Results (module)">Results</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results/SearchResult.html" title="DropboxApi::Results::SearchResult (class)">SearchResult</a></span></span></pre></dd>
+        <dd><pre class="code"><span class='const'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results.html" title="DropboxApi::Results (module)">Results</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Results/SearchV2Result.html" title="DropboxApi::Results::SearchV2Result (class)">SearchV2Result</a></span></span></pre></dd>
       
         <dt id="ErrorType-constant" class="">ErrorType =
           
@@ -157,7 +157,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#search-instance_method" title="#search (instance method)">#<strong>search</strong>(query, path = &quot;&quot;, options = {})  &#x21d2; Object </a>
+      <a href="#search-instance_method" title="#search (instance method)">#<strong>search</strong>(query, options = nil, match_field_options = nil)  &#x21d2; Object </a>
     
 
     
@@ -228,7 +228,7 @@
       <div class="method_details first">
   <h3 class="signature first" id="search-instance_method">
   
-    #<strong>search</strong>(query, path = &quot;&quot;, options = {})  &#x21d2; <tt>Object</tt> 
+    #<strong>search</strong>(query, options = nil, match_field_options = nil)  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -258,84 +258,48 @@ due to a short delay in indexing.</p>
       
       
         &mdash;
-        <div class='inline'><p>The string to search for. The search string is
-split on spaces into multiple tokens. For file name searching, the last
-token is used for prefix matching (i.e. &quot;bat c&quot; matches &quot;bat cave&quot; but
-not &quot;batman car&quot;).</p>
+        <div class='inline'><p>The string to search for. May match across
+multiple fields based on the request arguments.</p>
 </div>
       
     </li>
   
     <li>
       
-        <span class='name'>path</span>
+        <span class='name'>options</span>
       
       
-        <span class='type'>(<tt>String</tt>)</span>
+        <span class='type'>(<tt><span class='object_link'><a href="../../Metadata/SearchOptions.html" title="DropboxApi::Metadata::SearchOptions (class)">DropboxApi::Metadata::SearchOptions</a></span></tt>)</span>
       
       
-        <em class="default">(defaults to: <tt>&quot;&quot;</tt>)</em>
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
       
       
         &mdash;
-        <div class='inline'><p>The path in the user&#39;s Dropbox to search.</p>
+        <div class='inline'><p>Options for more
+targeted search results. This field is optional.</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>match_field_options</span>
+      
+      
+        <span class='type'>(<tt><span class='object_link'><a href="../../Metadata/SearchMatchFieldOptions.html" title="DropboxApi::Metadata::SearchMatchFieldOptions (class)">DropboxApi::Metadata::SearchMatchFieldOptions</a></span></tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'><p>Options for search results match fields. This field is optional.</p>
 </div>
       
     </li>
   
 </ul>
-
-  
-    
-    
-    
-    
-    
-    
-    <p class="tag_title">Options Hash (<tt>options</tt>):</p>
-    <ul class="option">
-      
-        <li>
-          <span class="name">start</span>
-          <span class="type">(<tt>Numeric</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>The starting index within the search
-results (used for paging). The default for this field is 0.</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">max_results</span>
-          <span class="type">(<tt>Numeric</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>The maximum number of search
-results to return. The default for this field is 100.</p>
-</div>
-          
-        </li>
-      
-        <li>
-          <span class="name">mode</span>
-          <span class="type">(<tt>:filename</tt>, <tt>:filename_and_content</tt>, <tt>:deleted_filename</tt>)</span>
-          <span class="default">
-            
-          </span>
-          
-            &mdash; <div class='inline'><p>The search mode. Note that searching file content is only
-available for Dropbox Business accounts. The default is filename.</p>
-</div>
-          
-        </li>
-      
-    </ul>
-  
 
 
 </div>
@@ -345,39 +309,27 @@ available for Dropbox Business accounts. The default is filename.</p>
       <pre class="lines">
 
 
+22
+23
+24
+25
+26
 27
 28
 29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41</pre>
+30</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/search.rb', line 27</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/search.rb', line 22</span>
 
-<span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:search</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='op'>|</span>
-  <span class='id identifier rubyid_validate_options'>validate_options</span><span class='lparen'>(</span><span class='lbracket'>[</span>
-    <span class='symbol'>:start</span><span class='comma'>,</span>
-    <span class='symbol'>:max_results</span><span class='comma'>,</span>
-    <span class='symbol'>:mode</span>
-  <span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
-  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:start</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>0</span>
-  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:max_results</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='int'>100</span>
-  <span class='id identifier rubyid_options'>options</span><span class='lbracket'>[</span><span class='symbol'>:mode</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='symbol'>:filename</span>
+<span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:search</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_query'>query</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id identifier rubyid_match_field_options'>match_field_options</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='op'>|</span>
+  <span class='id identifier rubyid_params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span> <span class='label'>query:</span> <span class='id identifier rubyid_query'>query</span> <span class='rbrace'>}</span>
 
-  <span class='id identifier rubyid_perform_request'>perform_request</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='symbol'>:query</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_query'>query</span><span class='comma'>,</span>
-    <span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span>
-  <span class='rbrace'>}</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>unless</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:match_field_options</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_match_field_options'>match_field_options</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span> <span class='kw'>unless</span> <span class='id identifier rubyid_match_field_options'>match_field_options</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+
+  <span class='id identifier rubyid_perform_request'>perform_request</span><span class='lparen'>(</span><span class='id identifier rubyid_params'>params</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -389,9 +341,9 @@ available for Dropbox Business accounts. The default is filename.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:34 2019 by
+  Generated on Sun Feb  7 11:51:56 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Endpoints::Files::UploadSessionFinish
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Endpoints::Files::UploadSessionFinish";
   relpath = '../../../';
 </script>
@@ -125,7 +125,7 @@
         <dt id="Path-constant" class="">Path =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/2/files/upload_session/finish</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/2/files/upload_session/finish</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="ResultType-constant" class="">ResultType =
           
@@ -292,20 +292,20 @@ other optional modifiers for the commit.</p>
       <pre class="lines">
 
 
-21
 22
 23
 24
 25
-26</pre>
+26
+27</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/upload_session_finish.rb', line 21</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/upload_session_finish.rb', line 22</span>
 
 <span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:upload_session_finish</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cursor'>cursor</span><span class='comma'>,</span> <span class='id identifier rubyid_commit'>commit</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='op'>|</span>
   <span class='id identifier rubyid_perform_request'>perform_request</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='symbol'>:cursor</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_cursor'>cursor</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
-    <span class='symbol'>:commit</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_commit'>commit</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
+    <span class='label'>cursor:</span> <span class='id identifier rubyid_cursor'>cursor</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span><span class='comma'>,</span>
+    <span class='label'>commit:</span> <span class='id identifier rubyid_commit'>commit</span><span class='period'>.</span><span class='id identifier rubyid_to_hash'>to_hash</span>
   <span class='rbrace'>}</span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -318,9 +318,9 @@ other optional modifiers for the commit.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:37 2019 by
+  Generated on Sun Feb  7 11:51:58 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

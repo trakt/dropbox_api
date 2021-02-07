@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Endpoints::Sharing::CreateSharedLinkWithSettings
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Endpoints::Sharing::CreateSharedLinkWithSettings";
   relpath = '../../../';
 </script>
@@ -125,7 +125,7 @@
         <dt id="Path-constant" class="">Path =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/2/sharing/create_shared_link_with_settings</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/2/sharing/create_shared_link_with_settings</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="ResultType-constant" class="">ResultType =
           
@@ -359,7 +359,6 @@ the link won&#39;t expire. This field is optional.</p>
       <pre class="lines">
 
 
-31
 32
 33
 34
@@ -373,10 +372,11 @@ the link won&#39;t expire. This field is optional.</p>
 42
 43
 44
-45</pre>
+45
+46</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/sharing/create_shared_link_with_settings.rb', line 31</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/sharing/create_shared_link_with_settings.rb', line 32</span>
 
 <span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:create_shared_link_with_settings</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_settings'>settings</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='op'>|</span>
   <span class='id identifier rubyid_validate_options'>validate_options</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -389,8 +389,8 @@ the link won&#39;t expire. This field is optional.</p>
   <span class='id identifier rubyid_settings'>settings</span><span class='lbracket'>[</span><span class='symbol'>:expires</span><span class='rbracket'>]</span> <span class='op'>||=</span> <span class='kw'>nil</span>
 
   <span class='id identifier rubyid_perform_request'>perform_request</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-    <span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span>
-    <span class='symbol'>:settings</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_settings'>settings</span>
+    <span class='label'>path:</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span>
+    <span class='label'>settings:</span> <span class='id identifier rubyid_settings'>settings</span>
   <span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -403,9 +403,9 @@ the link won&#39;t expire. This field is optional.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:37 2019 by
+  Generated on Sun Feb  7 11:51:59 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Endpoints::Sharing::ShareFolder
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Endpoints::Sharing::ShareFolder";
   relpath = '../../../';
 </script>
@@ -125,7 +125,7 @@
         <dt id="Path-constant" class="">Path =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/2/sharing/share_folder</span><span class='tstring_end'>&quot;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/2/sharing/share_folder</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="ResultType-constant" class="">ResultType =
           
@@ -364,7 +364,6 @@ happen asynchronously. The default for this field is <code>false</code>.</p>
       <pre class="lines">
 
 
-36
 37
 38
 39
@@ -383,10 +382,11 @@ happen asynchronously. The default for this field is <code>false</code>.</p>
 52
 53
 54
-55</pre>
+55
+56</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/sharing/share_folder.rb', line 36</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/sharing/share_folder.rb', line 37</span>
 
 <span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:share_folder</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='op'>|</span>
   <span class='id identifier rubyid_validate_options'>validate_options</span><span class='lparen'>(</span><span class='lbracket'>[</span>
@@ -402,7 +402,7 @@ happen asynchronously. The default for this field is <code>false</code>.</p>
 
   <span class='kw'>begin</span>
     <span class='id identifier rubyid_perform_request'>perform_request</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span><span class='lbrace'>{</span>
-      <span class='symbol'>:path</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_path'>path</span>
+      <span class='label'>path:</span> <span class='id identifier rubyid_path'>path</span>
     <span class='rbrace'>}</span><span class='rparen'>)</span>
   <span class='kw'>rescue</span> <span class='const'><span class='object_link'><a href="../../../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Errors.html" title="DropboxApi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="../../Errors/AlreadySharedError.html" title="DropboxApi::Errors::AlreadySharedError (class)">AlreadySharedError</a></span></span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_error'>error</span>
     <span class='id identifier rubyid_error'>error</span><span class='period'>.</span><span class='id identifier rubyid_shared_folder'>shared_folder</span>
@@ -418,9 +418,9 @@ happen asynchronously. The default for this field is <code>false</code>.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:35 2019 by
+  Generated on Sun Feb  7 11:51:57 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

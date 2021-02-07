@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::Endpoints::Sharing::GetSharedLinkMetadata
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::Endpoints::Sharing::GetSharedLinkMetadata";
   relpath = '../../../';
 </script>
@@ -125,7 +125,7 @@
         <dt id="Path-constant" class="">Path =
           
         </dt>
-        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/2/sharing/get_shared_link_metadata</span><span class='tstring_end'>&#39;</span></span><span class='period'>.</span><span class='id identifier rubyid_freeze'>freeze</span></pre></dd>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/2/sharing/get_shared_link_metadata</span><span class='tstring_end'>&#39;</span></span></pre></dd>
       
         <dt id="ResultType-constant" class="">ResultType =
           
@@ -306,22 +306,22 @@ a password, this parameter can be used.</p>
       <pre class="lines">
 
 
-22
 23
 24
 25
 26
 27
-28</pre>
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/sharing/get_shared_link_metadata.rb', line 22</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/sharing/get_shared_link_metadata.rb', line 23</span>
 
 <span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:get_shared_link_metadata</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_preview_link'>preview_link</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span><span class='op'>|</span>
   <span class='id identifier rubyid_validate_options'>validate_options</span><span class='lparen'>(</span><span class='lbracket'>[</span><span class='symbol'>:path</span><span class='comma'>,</span> <span class='symbol'>:link_password</span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_options'>options</span><span class='rparen'>)</span>
 
   <span class='id identifier rubyid_perform_request'>perform_request</span> <span class='id identifier rubyid_options'>options</span><span class='period'>.</span><span class='id identifier rubyid_merge'>merge</span><span class='lparen'>(</span>
-    <span class='symbol'>:url</span> <span class='op'>=&gt;</span> <span class='id identifier rubyid_preview_link'>preview_link</span>
+    <span class='label'>url:</span> <span class='id identifier rubyid_preview_link'>preview_link</span>
   <span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -334,9 +334,9 @@ a password, this parameter can be used.</p>
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:37 2019 by
+  Generated on Sun Feb  7 11:51:59 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>

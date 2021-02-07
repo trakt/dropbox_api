@@ -6,15 +6,15 @@
 <title>
   Class: DropboxApi::MiddleWare::DecodeResult
   
-    &mdash; Documentation by YARD 0.9.19
+    &mdash; Documentation by YARD 0.9.26
   
 </title>
 
-  <link rel="stylesheet" href="../../css/style.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/style.css" type="text/css" />
 
-  <link rel="stylesheet" href="../../css/common.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="../../css/common.css" type="text/css" />
 
-<script type="text/javascript" charset="utf-8">
+<script type="text/javascript">
   pathId = "DropboxApi::MiddleWare::DecodeResult";
   relpath = '../../';
 </script>
@@ -186,7 +186,6 @@
       <pre class="lines">
 
 
-3
 4
 5
 6
@@ -194,10 +193,11 @@
 8
 9
 10
-11</pre>
+11
+12</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/middleware/decode_result.rb', line 3</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/middleware/decode_result.rb', line 4</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_rq_env'>rq_env</span><span class='rparen'>)</span>
   <span class='ivar'>@app</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span><span class='lparen'>(</span><span class='id identifier rubyid_rq_env'>rq_env</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_on_complete'>on_complete</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_rs_env'>rs_env</span><span class='op'>|</span>
@@ -229,7 +229,6 @@
       <pre class="lines">
 
 
-13
 14
 15
 16
@@ -238,16 +237,17 @@
 19
 20
 21
-22</pre>
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/middleware/decode_result.rb', line 13</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/middleware/decode_result.rb', line 14</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_decode'>decode</span><span class='lparen'>(</span><span class='id identifier rubyid_json'>json</span><span class='rparen'>)</span>
   <span class='comment'># Dropbox may send a response with the string &#39;null&#39; in its body, this
 </span>  <span class='comment'># would be a void result. `add_folder_member` is an example of an
 </span>  <span class='comment'># endpoint without return values.
-</span>  <span class='kw'>if</span> <span class='id identifier rubyid_json'>json</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>null</span><span class='tstring_end'>&quot;</span></span>
+</span>  <span class='kw'>if</span> <span class='id identifier rubyid_json'>json</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>null</span><span class='tstring_end'>&#39;</span></span>
     <span class='lbrace'>{</span><span class='rbrace'>}</span>
   <span class='kw'>else</span>
     <span class='const'>JSON</span><span class='period'>.</span><span class='id identifier rubyid_parse'>parse</span> <span class='id identifier rubyid_json'>json</span>
@@ -263,9 +263,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri May 31 17:53:34 2019 by
+  Generated on Sun Feb  7 11:51:57 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.19 (ruby-2.6.2).
+  0.9.26 (ruby-2.5.1).
 </div>
 
     </div>
