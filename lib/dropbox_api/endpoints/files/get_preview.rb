@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class GetPreview < DropboxApi::Endpoints::ContentDownload
     Method      = :post
-    Path        = "/2/files/get_preview".freeze
+    Path        = '/2/files/get_preview'.freeze
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::PreviewError
 

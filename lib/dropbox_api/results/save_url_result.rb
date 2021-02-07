@@ -9,7 +9,7 @@ module DropboxApi::Results
     #
     # I couldn't manage to get anything other than an async job.
     def async_job_id
-      @data["async_job_id"]
+      @data['async_job_id']
     end
   end
 end

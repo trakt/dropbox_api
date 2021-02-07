@@ -16,7 +16,7 @@ module YARD
       def untab(str, tab_size = 2)
         tab_space = 2
 
-        str.gsub("\t", " " * tab_space)
+        str.gsub("\t", ' ' * tab_space)
       end
     end
   end

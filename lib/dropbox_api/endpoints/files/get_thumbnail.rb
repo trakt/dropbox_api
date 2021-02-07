@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class GetThumbnail < DropboxApi::Endpoints::ContentDownload
     Method      = :post
-    Path        = "/2/files/get_thumbnail".freeze
+    Path        = '/2/files/get_thumbnail'.freeze
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::PreviewError
 

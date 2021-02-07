@@ -17,7 +17,7 @@ module DropboxApi::Metadata
 
     def check_validity
       if @shared_link[:url].nil?
-        raise ArgumentError, "Missing `:url` option"
+        raise ArgumentError, 'Missing `:url` option'
       end
 
       @shared_link.keys.each do |key|

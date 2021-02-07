@@ -34,7 +34,7 @@ module DropboxApi::Metadata
     field :has_explicit_shared_members, :boolean, :optional
 
     def to_hash
-      super.merge(".tag" => "file")
+      super.merge('.tag' => 'file')
     end
   end
 end

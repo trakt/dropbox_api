@@ -9,7 +9,7 @@ module YARD
         CodeObjects::MethodObject.new(namespace, name) do |m|
           m.parameters = parameters
         end,
-        CodeObjects::MethodObject.new(P("DropboxApi::Client"), name) do |m|
+        CodeObjects::MethodObject.new(P('DropboxApi::Client'), name) do |m|
           m.parameters = parameters
           m.group = namespace.namespace.name.downcase
         end

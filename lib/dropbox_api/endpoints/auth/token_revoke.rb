@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Auth
   class TokenRevoke < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/auth/token/revoke".freeze
+    Path        = '/2/auth/token/revoke'.freeze
     ResultType  = DropboxApi::Results::VoidResult
     ErrorType   = nil
 

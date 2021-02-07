@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Users
   class GetAccountBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/users/get_account_batch".freeze
+    Path        = '/2/users/get_account_batch'.freeze
     ResultType  = DropboxApi::Results::BasicAccountBatch
     ErrorType   = DropboxApi::Errors::GetAccountError
 

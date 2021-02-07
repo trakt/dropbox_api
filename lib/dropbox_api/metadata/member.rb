@@ -34,7 +34,7 @@ module DropboxApi::Metadata
     private
 
     def hash_from_email_or_dropbox_id(email_or_id)
-      if email_or_id.start_with? "dbid:"
+      if email_or_id.start_with? 'dbid:'
         hash_from_dropbox_id email_or_id
       elsif email_or_id =~ /\A[^@\s]+@[^@\s]+\z/
         hash_from_email email_or_id

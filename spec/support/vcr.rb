@@ -2,7 +2,7 @@
 require 'vcr'
 
 VCR.configure do |config|
-  config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+  config.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
   config.hook_into :webmock # or :fakeweb
 
   headers_matcher =
@@ -13,8 +13,8 @@ VCR.configure do |config|
       :body,
       lambda { |a, b|
         [
-          "Authorization",
-          "Dropbox-Api-Arg"
+          'Authorization',
+          'Dropbox-Api-Arg'
         ].all? { |header| a.headers[header] == b.headers[header] }
       }
     ]

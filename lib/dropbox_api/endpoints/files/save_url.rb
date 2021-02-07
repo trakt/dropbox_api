@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class SaveUrl < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/save_url".freeze
+    Path        = '/2/files/save_url'.freeze
     ResultType  = DropboxApi::Results::SaveUrlResult
     ErrorType   = DropboxApi::Errors::SaveUrlError
 

@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class ListFolderLongpoll < DropboxApi::Endpoints::RpcNotify
     Method      = :post
-    Path        = "/2/files/list_folder/longpoll".freeze
+    Path        = '/2/files/list_folder/longpoll'.freeze
     ResultType  = DropboxApi::Results::ListFolderLongpollResult
     ErrorType   = DropboxApi::Errors::ListFolderLongpollError
 

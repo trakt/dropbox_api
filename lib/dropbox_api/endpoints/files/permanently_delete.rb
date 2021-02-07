@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class PermanentlyDelete < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/permanently_delete".freeze
+    Path        = '/2/files/permanently_delete'.freeze
     ResultType  = DropboxApi::Results::VoidResult
     ErrorType   = DropboxApi::Errors::DeleteError
 

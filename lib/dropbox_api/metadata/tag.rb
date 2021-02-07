@@ -6,7 +6,7 @@ module DropboxApi::Metadata
       when ::Symbol
         validate(data)
       when Hash
-        new(data[".tag"].to_sym)
+        new(data['.tag'].to_sym)
       when String
         new(data.to_sym)
       else

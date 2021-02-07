@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Users
   class GetCurrentAccount < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/users/get_current_account".freeze
+    Path        = '/2/users/get_current_account'.freeze
     ResultType  = DropboxApi::Metadata::BasicAccount
     ErrorType   = nil
 

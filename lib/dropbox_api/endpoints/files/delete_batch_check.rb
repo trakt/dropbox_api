@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class DeleteBatchCheck < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/delete_batch/check".freeze
+    Path        = '/2/files/delete_batch/check'.freeze
     ResultType  = DropboxApi::Results::DeleteBatchResult
     ErrorType   = DropboxApi::Errors::PollError
 

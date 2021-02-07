@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints
   class ContentUpload < DropboxApi::Endpoints::Base
     def initialize(builder)
-      @connection = builder.build("https://content.dropboxapi.com") do |c|
+      @connection = builder.build('https://content.dropboxapi.com') do |c|
         c.response :decode_result
       end
     end

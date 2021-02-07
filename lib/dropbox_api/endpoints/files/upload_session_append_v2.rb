@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class UploadSessionAppendV2 < DropboxApi::Endpoints::ContentUpload
     Method      = :post
-    Path        = "/2/files/upload_session/append_v2".freeze
+    Path        = '/2/files/upload_session/append_v2'.freeze
     ResultType  = DropboxApi::Results::VoidResult
     ErrorType   = DropboxApi::Errors::UploadSessionLookupError
 

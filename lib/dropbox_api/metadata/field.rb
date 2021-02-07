@@ -25,9 +25,9 @@ module DropboxApi::Metadata
       elsif @type == Float
         object.to_f
       elsif @type == Symbol
-        object[".tag"].to_sym
+        object['.tag'].to_sym
       elsif @type == :boolean
-        object.to_s == "true"
+        object.to_s == 'true'
       elsif @type.ancestors.include? DropboxApi::Metadata::Base
         @type.new(object)
       else

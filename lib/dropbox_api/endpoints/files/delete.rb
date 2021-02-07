@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class Delete < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/delete".freeze
+    Path        = '/2/files/delete'.freeze
     ResultType  = DropboxApi::Metadata::Resource
     ErrorType   = DropboxApi::Errors::DeleteError
 

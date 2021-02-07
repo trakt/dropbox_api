@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class CreateFolderBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/create_folder_batch".freeze
+    Path        = '/2/files/create_folder_batch'.freeze
     ResultType  = DropboxApi::Results::CreateFolderBatchResult
 
     include DropboxApi::OptionsValidator

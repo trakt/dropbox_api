@@ -15,7 +15,7 @@ module DropboxApi::MiddleWare
       # Dropbox may send a response with the string 'null' in its body, this
       # would be a void result. `add_folder_member` is an example of an
       # endpoint without return values.
-      if json == "null"
+      if json == 'null'
         {}
       else
         JSON.parse json

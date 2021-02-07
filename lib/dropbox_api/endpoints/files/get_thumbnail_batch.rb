@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class GetThumbnailBatch < DropboxApi::Endpoints::RpcContent
     Method      = :post
-    Path        = "/2/files/get_thumbnail_batch".freeze
+    Path        = '/2/files/get_thumbnail_batch'.freeze
     ResultType  = DropboxApi::Results::GetThumbnailBatchResult
     ErrorType   = DropboxApi::Errors::ThumbnailBatchError
 

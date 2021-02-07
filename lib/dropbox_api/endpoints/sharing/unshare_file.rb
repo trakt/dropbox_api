@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class UnshareFile < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/sharing/unshare_file".freeze
+    Path        = '/2/sharing/unshare_file'.freeze
     ResultType  = DropboxApi::Results::VoidResult
     ErrorType   = DropboxApi::Errors::UnshareFileError
 

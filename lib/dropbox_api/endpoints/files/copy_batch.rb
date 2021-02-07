@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class CopyBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/copy_batch_v2".freeze
+    Path        = '/2/files/copy_batch_v2'.freeze
     ResultType  = DropboxApi::Results::CopyBatchResult
 
     include DropboxApi::OptionsValidator

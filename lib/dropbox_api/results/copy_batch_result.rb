@@ -2,7 +2,7 @@
 module DropboxApi::Results
   class CopyBatchResult < DropboxApi::Results::Base
     def self.new(result_data)
-      case result_data[".tag"]
+      case result_data['.tag']
       when 'async_job_id'
         result_data['async_job_id']
       when 'complete'

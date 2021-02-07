@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class CreateSharedLinkWithSettings < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/sharing/create_shared_link_with_settings".freeze
+    Path        = '/2/sharing/create_shared_link_with_settings'.freeze
     ResultType  = DropboxApi::Metadata::SharedLinkMetadata
     ErrorType   = DropboxApi::Errors::CreateSharedLinkWithSettingsError
 

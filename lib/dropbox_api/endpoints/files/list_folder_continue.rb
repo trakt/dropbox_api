@@ -5,7 +5,7 @@ module DropboxApi::Endpoints::Files
     #       long enough to enable the `has_more` attribute in the
     #       `ListFolderResult`.
     Method      = :post
-    Path        = "/2/files/list_folder/continue".freeze
+    Path        = '/2/files/list_folder/continue'.freeze
     ResultType  = DropboxApi::Results::ListFolderResult
     ErrorType   = DropboxApi::Errors::ListFolderContinueError
 

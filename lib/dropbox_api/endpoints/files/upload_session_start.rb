@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class UploadSessionStart < DropboxApi::Endpoints::ContentUpload
     Method      = :post
-    Path        = "/2/files/upload_session/start".freeze
+    Path        = '/2/files/upload_session/start'.freeze
     ResultType  = DropboxApi::Results::UploadSessionStart
     ErrorType   = nil
 
@@ -31,8 +31,8 @@ module DropboxApi::Endpoints::Files
       session = perform_request(options, content)
 
       DropboxApi::Metadata::UploadSessionCursor.new({
-        "session_id" => session.session_id,
-        "offset" => content.bytesize
+        'session_id' => session.session_id,
+        'offset' => content.bytesize
       })
     end
   end

@@ -10,11 +10,11 @@ module DropboxApi::Metadata
   class ThumbnailBatchResultEntry
     class << self
       def new(data)
-        case data[".tag"].to_sym
+        case data['.tag'].to_sym
         when :success
           DropboxApi::Metadata::ThumbnailBatchResultData.new(data)
         when :failure
-          DropboxApi::Errors::ThumbnailError.build("Thumbnail generation failed", data["failure"])
+          DropboxApi::Errors::ThumbnailError.build('Thumbnail generation failed', data['failure'])
         else
           raise NotImplementedError, "Unknown result type: #{data[".tag"]}"
         end

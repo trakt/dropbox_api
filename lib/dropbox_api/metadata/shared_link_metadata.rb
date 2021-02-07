@@ -7,7 +7,7 @@ module DropboxApi::Metadata
   class SharedLinkMetadata
     class << self
       def new(data)
-        class_for(data[".tag"].to_sym).new(data)
+        class_for(data['.tag'].to_sym).new(data)
       end
 
       private

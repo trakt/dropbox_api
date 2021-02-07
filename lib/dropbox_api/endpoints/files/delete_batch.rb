@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class DeleteBatch < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/delete_batch".freeze
+    Path        = '/2/files/delete_batch'.freeze
     ResultType  = DropboxApi::Results::DeleteBatchResult
 
     # Delete multiple files/folders at once.

@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class ListRevisions < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/list_revisions".freeze
+    Path        = '/2/files/list_revisions'.freeze
     ResultType  = DropboxApi::Results::ListRevisionsResult
     ErrorType   = DropboxApi::Errors::ListRevisionsError
 

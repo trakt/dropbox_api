@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class SaveUrlCheckJobStatus < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/save_url/check_job_status".freeze
+    Path        = '/2/files/save_url/check_job_status'.freeze
     ResultType  = DropboxApi::Results::SaveUrlJobStatus
     ErrorType   = DropboxApi::Errors::PollError
 

@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class GetTemporaryLink < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/get_temporary_link".freeze
+    Path        = '/2/files/get_temporary_link'.freeze
     ResultType  = DropboxApi::Results::GetTemporaryLinkResult
     ErrorType   = DropboxApi::Errors::GetMetadataError
 

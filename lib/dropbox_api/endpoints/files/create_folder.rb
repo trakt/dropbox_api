@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class CreateFolder < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/create_folder".freeze
+    Path        = '/2/files/create_folder'.freeze
     ResultType  = DropboxApi::Metadata::Folder
     ErrorType   = DropboxApi::Errors::CreateFolderError
 

@@ -26,8 +26,8 @@ module DropboxApi::Metadata
     class << self
       def build_from_string(member, access_level = :editor)
         new({
-          "member" => Member.new(member),
-          "access_level" => access_level
+          'member' => Member.new(member),
+          'access_level' => access_level
         })
       end
     end

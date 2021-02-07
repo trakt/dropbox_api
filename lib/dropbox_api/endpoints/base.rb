@@ -26,11 +26,11 @@ module DropboxApi::Endpoints
         build_result(raw_response.env[:api_result])
       when 429
         error = DropboxApi::Errors::TooManyRequestsError.build(
-          raw_response.env[:api_result]["error_summary"],
-          raw_response.env[:api_result]["error"]["reason"]
+          raw_response.env[:api_result]['error_summary'],
+          raw_response.env[:api_result]['error']['reason']
         )
 
-        error.retry_after = raw_response.headers["retry-after"].to_i
+        error.retry_after = raw_response.headers['retry-after'].to_i
 
         raise error
       else

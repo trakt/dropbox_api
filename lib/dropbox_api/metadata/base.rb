@@ -47,7 +47,7 @@ module DropboxApi::Metadata
       value = send field_name
       case value
       when Time
-        value.utc.strftime("%FT%TZ")
+        value.utc.strftime('%FT%TZ')
       when DropboxApi::Metadata::Base
         value.to_hash
       else

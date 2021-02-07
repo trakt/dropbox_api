@@ -24,7 +24,7 @@ module DropboxApi
       end
 
       # Workaround the API changes Faraday introduced in 1.0 :(
-      if Faraday::VERSION.start_with? "0."
+      if Faraday::VERSION.start_with? '0.'
         expect(connection.builder.handlers).to eq [
           MiddlewareStart,
           MiddlewareMiddle,
