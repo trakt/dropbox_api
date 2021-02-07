@@ -4,7 +4,7 @@ describe DropboxApi::Client, "#get_account_batch" do
     @client = DropboxApi::Client.new
   end
 
-  it "returns account information of all given IDs", :cassette => "get_account_batch/success" do
+  it "returns account information of all given IDs", cassette: "get_account_batch/success" do
     test_accounts = {
       "dbid:AACiYqkuK0t_wIvlr9BduHKdhzk_H28Dg0U" => "Antonio Hidalgo",
       "dbid:AAAKVPLEKkkccsZMFkkZNXFeyXrPPhrtFxs" => "Jesus Burgos"
@@ -18,7 +18,7 @@ describe DropboxApi::Client, "#get_account_batch" do
     end
   end
 
-  it "raises an error if one account can't e found", :cassette => "get_account_batch/no_account" do
+  it "raises an error if one account can't e found", cassette: "get_account_batch/no_account" do
     account_ids = %w(
       dbid:AAAKVPLEKkkccsZMFkkZNXFeyXrPPhrtXXX
       dbid:AAAKVPLEKkkccsZMFkkZNXFeyXrPPhrtFxs

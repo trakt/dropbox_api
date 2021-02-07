@@ -12,7 +12,7 @@ module DropboxApi::Endpoints::Files
     #
     # @param path [String] The path of the file to preview.
     add_endpoint :get_preview do |path, &block|
-      perform_request({:path => path}, &block)
+      perform_request({path: path}, &block)
     end
   end
 end

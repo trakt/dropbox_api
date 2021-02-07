@@ -13,7 +13,7 @@ module DropboxApi::Endpoints::Files
     # @return The current status of the job.
     add_endpoint :save_url_check_job_status do |job_id|
       perform_request({
-        :async_job_id => job_id
+        async_job_id: job_id
       })
     end
   end

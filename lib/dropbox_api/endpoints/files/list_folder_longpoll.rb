@@ -29,7 +29,7 @@ module DropboxApi::Endpoints::Files
       options[:timeout] ||= 30
 
       perform_request options.merge({
-        :cursor => cursor
+        cursor: cursor
       })
     end
   end

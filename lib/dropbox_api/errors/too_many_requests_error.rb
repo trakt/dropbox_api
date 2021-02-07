@@ -13,8 +13,8 @@ module DropboxApi::Errors
     end
 
     ErrorSubtypes = {
-      :too_many_requests => TooManyRequestsError,
-      :too_many_write_operations => TooManyWriteOperationsError
+      too_many_requests: TooManyRequestsError,
+      too_many_write_operations: TooManyWriteOperationsError
     }
   end
 end

@@ -7,7 +7,7 @@ VCR.configure do |config|
 
   headers_matcher =
   config.default_cassette_options = {
-    :match_requests_on => [
+    match_requests_on: [
       :method,
       :uri,
       :body,

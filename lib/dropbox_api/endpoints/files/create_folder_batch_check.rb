@@ -15,7 +15,7 @@ module DropboxApi::Endpoints::Files
     # @return [Array] A list of one result for each entry.
     add_endpoint :create_folder_batch_check do |async_job_id|
       perform_request({
-        :async_job_id => async_job_id
+        async_job_id: async_job_id
       })
     end
   end

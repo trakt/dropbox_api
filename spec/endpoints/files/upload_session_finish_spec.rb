@@ -4,7 +4,7 @@ describe DropboxApi::Client, "#upload_session_finish" do
     @client = DropboxApi::Client.new
   end
 
-  it "will create a file", :cassette => "upload_session_finish/success" do
+  it "will create a file", cassette: "upload_session_finish/success" do
     cursor = @client.upload_session_start("Hello Dropbox!")
     commit = DropboxApi::Metadata::CommitInfo.new({
       "path" => "/Homework/math/Matrices.txt",

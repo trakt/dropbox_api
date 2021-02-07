@@ -12,7 +12,7 @@ module DropboxApi::Endpoints::Files
     # @return [DropboxApi::Metadata::Folder] The new folder.
     add_endpoint :create_folder do |path|
       perform_request({
-        :path => path
+        path: path
       })
     end
   end

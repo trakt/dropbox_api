@@ -5,7 +5,7 @@ describe DropboxApi::Client, "#upload_session_append_v2" do
     @client = DropboxApi::Client.new
   end
 
-  it 'can be used to append an upload', :cassette => 'upload_session_append_v2/success' do
+  it 'can be used to append an upload', cassette: 'upload_session_append_v2/success' do
     chunks = ['123456789', 'Olá Dropbox!']
 
     cursor = @client.upload_session_start(chunks.first)
@@ -20,7 +20,7 @@ describe DropboxApi::Client, "#upload_session_append_v2" do
     expect { @client.upload_session_finish(cursor, commit) }.not_to raise_error
   end
 
-  it "will raise error if the cursor can't be found", :cassette => "upload_session_append_v2/not_found" do
+  it "will raise error if the cursor can't be found", cassette: "upload_session_append_v2/not_found" do
     cursor = DropboxApi::Metadata::UploadSessionCursor.new({
       "session_id" => "INVALID_CURSOR",
       "offset" => 0
@@ -31,7 +31,7 @@ describe DropboxApi::Client, "#upload_session_append_v2" do
     }.to raise_error(DropboxApi::Errors::NotFoundError)
   end
 
-  it "will raise error if the offset is wrong", :cassette => "upload_session_append_v2/offset_error" do
+  it "will raise error if the offset is wrong", cassette: "upload_session_append_v2/offset_error" do
     chunk = "123456789"
 
     cursor = @client.upload_session_start(chunk)

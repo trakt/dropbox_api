@@ -5,14 +5,14 @@ describe DropboxApi::Client, "#upload" do
     @client = DropboxApi::Client.new
   end
 
-  it "uploads a file", :cassette => "upload/success" do
+  it "uploads a file", cassette: "upload/success" do
     file = @client.upload("#{path_prefix}/file.txt", "Hello Dropbox!")
 
     expect(file).to be_a(DropboxApi::Metadata::File)
     expect(file.name).to eq("file.txt")
   end
 
-  it "works with an IO object", :cassette => "upload/success_io" do
+  it "works with an IO object", cassette: "upload/success_io" do
     content = File.open(File.join(DropboxScaffoldBuilder.fixtures_path, "file.txt"))
     file = @client.upload("#{path_prefix}/file_io.txt", content)
 
@@ -21,42 +21,42 @@ describe DropboxApi::Client, "#upload" do
     expect(file.content_hash).to eq("709a5cf259366d6ca6b2fa4d3b53c02f5ce2b2764e9d580711e3ffd24d79f5e9")
   end
 
-  it "uploads a file with `add` write mode", :cassette => "upload/success_add" do
+  it "uploads a file with `add` write mode", cassette: "upload/success_add" do
     file = @client.upload("#{path_prefix}/file.txt", "Hola Dropbox!", {
-      :autorename => true,
-      :mode => :add
+      autorename: true,
+      mode: :add
     })
 
     expect(file).to be_a(DropboxApi::Metadata::File)
     expect(file.name).to eq("file (1).txt")
   end
 
-  it "uploads a file with `overwrite` write mode", :cassette => "upload/success_overwrite" do
+  it "uploads a file with `overwrite` write mode", cassette: "upload/success_overwrite" do
     file = @client.upload("#{path_prefix}/file.txt", "Hola Dropbox!", {
-      :autorename => true,
-      :mode => :overwrite
+      autorename: true,
+      mode: :overwrite
     })
 
     expect(file).to be_a(DropboxApi::Metadata::File)
     expect(file.name).to eq("file.txt")
   end
 
-  it "uploads a file with `update` write mode", :cassette => "upload/success_update" do
+  it "uploads a file with `update` write mode", cassette: "upload/success_update" do
     rev = @client.get_metadata("#{path_prefix}/file.txt").rev
     file = @client.upload("#{path_prefix}/file.txt", "Hallo Dropbox!", {
-      :autorename => true,
-      :mode => DropboxApi::Metadata::WriteMode.new(:update, rev)
+      autorename: true,
+      mode: DropboxApi::Metadata::WriteMode.new(:update, rev)
     })
 
     expect(file).to be_a(DropboxApi::Metadata::File)
     expect(file.name).to eq("file.txt")
   end
 
-  it "uploads a file with `overwrite` write mode", :cassette => "upload/success_client_modified" do
+  it "uploads a file with `overwrite` write mode", cassette: "upload/success_client_modified" do
     modified_at = Time.utc 2016, 12, 25, 12, 0
 
     file = @client.upload("#{path_prefix}/another_file.txt", "Our country is a mess!", {
-      :client_modified => modified_at
+      client_modified: modified_at
     })
 
     expect(file).to be_a(DropboxApi::Metadata::File)
@@ -65,7 +65,7 @@ describe DropboxApi::Client, "#upload" do
   end
 
   context "when too many write operations" do
-    it "raises a DropboxApi::Errors::TooManyWriteOperations exception", :cassette => "upload/too_many_write_operations" do
+    it "raises a DropboxApi::Errors::TooManyWriteOperations exception", cassette: "upload/too_many_write_operations" do
       errors = []
 
       15.times.map do |n|
@@ -81,7 +81,7 @@ describe DropboxApi::Client, "#upload" do
       expect(errors.any?).to be_truthy
     end
 
-    it "raises an exception with info to retry", :cassette => "upload/too_many_write_operations" do
+    it "raises an exception with info to retry", cassette: "upload/too_many_write_operations" do
       errors = []
 
       15.times.map do |n|

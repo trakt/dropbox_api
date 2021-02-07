@@ -5,21 +5,21 @@ describe DropboxApi::Client, "#copy_batch" do
     @client = DropboxApi::Client.new
   end
 
-  it "returns an async job id", :cassette => "copy_batch/success" do
+  it "returns an async job id", cassette: "copy_batch/success" do
     job_id = @client.copy_batch [{
-      :from_path => "#{path_prefix}/regular_file.txt",
-      :to_path => "#{path_prefix}/regular_file_renamed.txt"
+      from_path: "#{path_prefix}/regular_file.txt",
+      to_path: "#{path_prefix}/regular_file_renamed.txt"
     }]
 
     expect(job_id)
       .to eq("dbjid:AAA6b4uwc19nEau5k-OBI_h-hjrR7pNDaUA3_0hOwV-UZ2pkw_zXWp3FSuVZrQ0d9IXKGkwB5JdYI4mJZumLc6qZ")
   end
 
-  it "if autorename option is true, returns an async job id", :cassette => "copy_batch/autorename_success" do
+  it "if autorename option is true, returns an async job id", cassette: "copy_batch/autorename_success" do
     job_id = @client.copy_batch([{
-      :from_path => "#{path_prefix}/regular_file_2.txt",
-      :to_path => "#{path_prefix}/regular_file_2_renamed.txt"
-    }], :autorename => true)
+      from_path: "#{path_prefix}/regular_file_2.txt",
+      to_path: "#{path_prefix}/regular_file_2_renamed.txt"
+    }], autorename: true)
 
     expect(job_id)
       .to eq("dbjid:AABe-bOUUq5nrybciMJxIxaGAD16nGCKByGyY3Z_2m6kshGW903XTikVT3_5V6JQQu20p3QxoCfws7_hT40deF6q")

@@ -7,7 +7,7 @@ module DropboxApi::Metadata
       @shared_link =
         case param
         when String
-          {:url => param}
+          {url: param}
         when Hash
           param
         end

@@ -39,8 +39,8 @@ module DropboxApi::Endpoints::Sharing
       options[:add_message_as_comment] ||= false
 
       perform_request options.merge({
-        :file => file,
-        :members => build_members_param(members)
+        file: file,
+        members: build_members_param(members)
       })
     end
 

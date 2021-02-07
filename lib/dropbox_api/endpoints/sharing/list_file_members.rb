@@ -39,8 +39,8 @@ module DropboxApi::Endpoints::Sharing
       options[:limit] ||= 100
 
       perform_request options.merge({
-        :file => file_id,
-        :actions => DropboxApi::Metadata::MemberActionList.new(actions)
+        file: file_id,
+        actions: DropboxApi::Metadata::MemberActionList.new(actions)
       })
     end
   end

@@ -26,12 +26,12 @@ module DropboxApi::Endpoints::Files
       options[:size] ||= :w64h64
       options[:mode] ||= :strict
 
-      perform_request :entries => build_entries_params(paths, options)
+      perform_request entries: build_entries_params(paths, options)
     end
 
     def build_entries_params(paths, options)
       paths.map do |path|
-        options.merge({ :path => path })
+        options.merge({ path: path })
       end
     end
 

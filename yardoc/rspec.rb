@@ -10,9 +10,9 @@ class RSpecDescribeHandler < YARD::Handlers::Ruby::Base
       src = statement.parameters[1].jump(:string_content).source
       objname += (src[0] == "#" ? "" : "::") + src
     end
-    obj = {:spec => owner ? (owner[:spec] || "") : ""}
+    obj = {spec: owner ? (owner[:spec] || "") : ""}
     obj[:spec] += objname
-    parse_block(statement.last.last, :owner => obj)
+    parse_block(statement.last.last, owner: obj)
   rescue YARD::Handlers::NamespaceMissingError
   end
 end
@@ -27,10 +27,10 @@ class RSpecItHandler < YARD::Handlers::Ruby::Base
 
     obj[:specifications] ||= []
     obj[:specifications] << {
-      :name => statement.parameters.first.jump(:string_content).source,
-      :file => statement.file,
-      :line => statement.line,
-      :source => statement.last.last.source
+      name: statement.parameters.first.jump(:string_content).source,
+      file: statement.file,
+      line: statement.line,
+      source: statement.last.last.source
     }
   end
 end

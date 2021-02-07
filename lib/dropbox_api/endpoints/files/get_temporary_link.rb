@@ -12,7 +12,7 @@ module DropboxApi::Endpoints::Files
     #
     # @param path [String] The path to the file you want a temporary link to.
     add_endpoint :get_temporary_link do |path|
-      perform_request({:path => path})
+      perform_request({path: path})
     end
   end
 end

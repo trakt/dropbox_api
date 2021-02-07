@@ -24,7 +24,7 @@ module DropboxApi::Endpoints::Sharing
       validate_options([:path, :link_password], options)
 
       perform_request options.merge(
-        :url => preview_link
+        url: preview_link
       )
     end
   end

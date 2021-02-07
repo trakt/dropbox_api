@@ -14,7 +14,7 @@ module DropboxApi::Endpoints::Files
     #   flag or a list of job statuses.
     add_endpoint :delete_batch_check do |async_job_id|
       perform_request({
-        :async_job_id => async_job_id
+        async_job_id: async_job_id
       })
     end
   end

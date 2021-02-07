@@ -13,7 +13,7 @@ module DropboxApi::Endpoints::Users
     #   contain any duplicate account IDs.
     # @return [Array<BasicAccount>] Basic information about any account.
     add_endpoint :get_account_batch do |account_ids|
-      perform_request :account_ids => account_ids
+      perform_request account_ids: account_ids
     end
   end
 end

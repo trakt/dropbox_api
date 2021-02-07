@@ -29,7 +29,7 @@ module DropboxApi::Endpoints::Files
       options[:autorename] ||= false
 
       perform_request(options.merge({
-        :entries => entries
+        entries: entries
       }))
     end
   end

@@ -14,8 +14,8 @@ module DropboxApi::Endpoints::Files
     # @return The moved file.
     add_endpoint :copy do |from, to|
       perform_request({
-        :from_path => from,
-        :to_path => to
+        from_path: from,
+        to_path: to
       })
     end
   end

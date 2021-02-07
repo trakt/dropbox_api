@@ -20,7 +20,7 @@ module DropboxApi::Endpoints::Files
       options[:limit] ||= 10
 
       perform_request options.merge({
-        :path => path
+        path: path
       })
     end
   end

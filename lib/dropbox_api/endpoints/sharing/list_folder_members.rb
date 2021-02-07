@@ -32,8 +32,8 @@ module DropboxApi::Endpoints::Sharing
       options[:limit] ||= 100
 
       perform_request options.merge({
-        :shared_folder_id => folder_id,
-        :actions => DropboxApi::Metadata::MemberActionList.new(actions)
+        shared_folder_id: folder_id,
+        actions: DropboxApi::Metadata::MemberActionList.new(actions)
       })
     end
   end

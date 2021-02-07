@@ -48,7 +48,7 @@ module DropboxApi::Endpoints::Sharing
 
       begin
         perform_request options.merge({
-          :path => path
+          path: path
         })
       rescue DropboxApi::Errors::AlreadySharedError => error
         error.shared_folder

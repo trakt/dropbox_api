@@ -12,7 +12,7 @@ describe DropboxApi::Client, "#list_folder_continue" do
     end
   end
 
-  it "returns a ListFolderResult", :cassette => "list_folder_continue/success" do
+  it "returns a ListFolderResult", cassette: "list_folder_continue/success" do
     result = @client.list_folder_continue(@cursor)
 
     expect(result).to be_a(DropboxApi::Results::ListFolderResult)

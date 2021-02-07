@@ -17,7 +17,7 @@ module DropboxApi::Endpoints::Sharing
 
     add_endpoint :revoke_shared_link do |url|
       perform_request({
-        :url => url
+        url: url
       })
     end
   end

@@ -21,8 +21,8 @@ module DropboxApi::Endpoints::Files
     #   other optional modifiers for the commit.
     add_endpoint :upload_session_finish do |cursor, commit, content = nil|
       perform_request({
-        :cursor => cursor.to_hash,
-        :commit => commit.to_hash
+        cursor: cursor.to_hash,
+        commit: commit.to_hash
       }, content)
     end
   end

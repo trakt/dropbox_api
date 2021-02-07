@@ -2,7 +2,7 @@
 module DropboxApi::Errors
   class SearchError < BasicError
     ErrorSubtypes = {
-      :path => LookupError
+      path: LookupError
     }.freeze
   end
 end

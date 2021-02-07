@@ -36,8 +36,8 @@ module DropboxApi::Endpoints::Files
       options[:mode] ||= :filename
 
       perform_request options.merge({
-        :query => query,
-        :path => path
+        query: query,
+        path: path
       })
     end
   end

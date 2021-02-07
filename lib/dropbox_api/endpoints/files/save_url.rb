@@ -15,8 +15,8 @@ module DropboxApi::Endpoints::Files
     # @return Either the saved file or a reference to the async job.
     add_endpoint :save_url do |path, url|
       perform_request({
-        :path => path,
-        :url => url
+        path: path,
+        url: url
       })
     end
   end

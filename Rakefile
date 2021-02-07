@@ -5,4 +5,4 @@ require File.expand_path('../spec/support/rake_tasks', __FILE__)
 
 RSpec::Core::RakeTask.new(:spec)
 
-task :default => :spec
+task default: :spec

@@ -13,7 +13,7 @@ module DropboxApi::Endpoints::Sharing
     # @param file [String] Path or ID of the file in the user's Dropbox to unshare.
     add_endpoint :unshare_file do |file|
       perform_request({
-        :file => file
+        file: file
       })
     end
   end

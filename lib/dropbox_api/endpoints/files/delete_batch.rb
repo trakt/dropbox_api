@@ -16,7 +16,7 @@ module DropboxApi::Endpoints::Files
     # @return [String, Array] Either the job id or the list of job statuses.
     add_endpoint :delete_batch do |entries|
       perform_request({
-        :entries => entries
+        entries: entries
       })
     end
   end

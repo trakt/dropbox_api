@@ -2,7 +2,7 @@
 module DropboxApi::Errors
   class ListFolderLongpollError < BasicError
     ErrorSubtypes = {
-      :reset => InvalidCursorError
+      reset: InvalidCursorError
     }.freeze
   end
 end

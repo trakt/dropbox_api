@@ -82,7 +82,7 @@ class DropboxScaffoldBuilder
 
   def build_get_metadata
     client.upload("#{path_prefix}/file.txt", "This is a test file.", {
-      :client_modified => Time.new(1988, 12, 8, 1, 1, 0, "+00:00")
+      client_modified: Time.new(1988, 12, 8, 1, 1, 0, "+00:00")
     })
     client.create_folder("#{path_prefix}/folder")
     client.upload("#{path_prefix}/deleted_file.txt", "This is a test file.")

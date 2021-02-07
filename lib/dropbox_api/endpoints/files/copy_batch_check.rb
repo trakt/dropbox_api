@@ -15,7 +15,7 @@ module DropboxApi::Endpoints::Files
     # @return [:in_progress, Array] This could be either the `:in_progress`
     #   flag or a list of job statuses.
     add_endpoint :copy_batch_check do |async_job_id|
-      perform_request :async_job_id => async_job_id
+      perform_request async_job_id: async_job_id
     end
   end
 end

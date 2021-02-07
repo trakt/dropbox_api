@@ -45,15 +45,15 @@ module DropboxApi::Metadata
 
     def hash_from_dropbox_id(dropbox_id)
       {
-        :".tag" => :dropbox_id,
-        :dropbox_id => dropbox_id
+        ".tag": :dropbox_id,
+        dropbox_id: dropbox_id
       }
     end
 
     def hash_from_email(email)
       {
-        :".tag" => :email,
-        :email => email
+        ".tag": :email,
+        email: email
       }
     end
   end

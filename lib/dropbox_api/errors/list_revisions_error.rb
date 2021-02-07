@@ -2,7 +2,7 @@
 module DropboxApi::Errors
   class ListRevisionsError < BasicError
     ErrorSubtypes = {
-      :path => LookupError
+      path: LookupError
     }.freeze
   end
 end

@@ -15,8 +15,8 @@ module DropboxApi::Endpoints::Files
     # @return [DropboxApi::Results::SaveCopyReferenceResult]
     add_endpoint :copy_reference_save do |copy_reference, path|
       perform_request({
-        :copy_reference => copy_reference,
-        :path => path
+        copy_reference: copy_reference,
+        path: path
       })
     end
   end

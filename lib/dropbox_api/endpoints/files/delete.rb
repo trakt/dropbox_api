@@ -26,7 +26,7 @@ module DropboxApi::Endpoints::Files
       validate_options([:parent_rev], options)
 
       perform_request options.merge({
-        :path => path
+        path: path
       })
     end
   end

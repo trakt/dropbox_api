@@ -11,8 +11,8 @@ describe DropboxApi::Client, "#list_folder_get_latest_cursor" do
     end
   end
 
-  it "returns a ListFolderGetLatestCursorResult", :cassette => "list_folder_get_latest_cursor/success" do
-    result = @client.list_folder_get_latest_cursor :path => "/folder"
+  it "returns a ListFolderGetLatestCursorResult", cassette: "list_folder_get_latest_cursor/success" do
+    result = @client.list_folder_get_latest_cursor path: "/folder"
 
     expect(result)
       .to be_a(DropboxApi::Results::ListFolderGetLatestCursorResult)

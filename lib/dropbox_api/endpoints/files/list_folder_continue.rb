@@ -15,7 +15,7 @@ module DropboxApi::Endpoints::Files
     # @param cursor [String] The cursor returned by your last call to
     #   list_folder or list_folder_continue.
     add_endpoint :list_folder_continue do |cursor|
-      perform_request :cursor => cursor
+      perform_request cursor: cursor
     end
   end
 end

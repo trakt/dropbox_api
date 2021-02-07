@@ -40,8 +40,8 @@ module DropboxApi::Endpoints::Sharing
       settings[:expires] ||= nil
 
       perform_request({
-        :path => path,
-        :settings => settings
+        path: path,
+        settings: settings
       })
     end
   end

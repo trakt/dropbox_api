@@ -12,8 +12,8 @@ module DropboxApi::Endpoints::Files
     # @param rev [String] The revision to restore for the file.
     add_endpoint :restore do |path, rev|
       perform_request({
-        :path => path,
-        :rev => rev
+        path: path,
+        rev: rev
       })
     end
   end

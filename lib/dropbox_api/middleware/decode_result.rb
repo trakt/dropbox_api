@@ -23,5 +23,5 @@ module DropboxApi::MiddleWare
     end
   end
 
-  Faraday::Response.register_middleware :decode_result => DecodeResult
+  Faraday::Response.register_middleware decode_result: DecodeResult
 end

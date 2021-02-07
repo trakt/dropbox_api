@@ -34,7 +34,7 @@ module DropboxApi::Endpoints::Files
       options[:force_async] ||= false
 
       perform_request(options.merge({
-        :paths => paths
+        paths: paths
       }))
     end
   end
