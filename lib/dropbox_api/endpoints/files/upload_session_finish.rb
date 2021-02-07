@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class UploadSessionFinish < DropboxApi::Endpoints::ContentUpload
     Method      = :post
-    Path        = '/2/files/upload_session/finish'.freeze
+    Path        = '/2/files/upload_session/finish'
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::UploadSessionFinishError
 

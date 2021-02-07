@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class CopyReferenceSave < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/files/copy_reference/save'.freeze
+    Path        = '/2/files/copy_reference/save'
     ResultType  = DropboxApi::Results::SaveCopyReferenceResult
     ErrorType   = DropboxApi::Errors::SaveCopyReferenceError
 

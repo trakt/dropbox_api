@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class AddFileMember < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/sharing/add_file_member'.freeze
+    Path        = '/2/sharing/add_file_member'
     ResultType  = DropboxApi::Results::AddFileMemberResultList
     ErrorType   = DropboxApi::Errors::AddFileMemberError
 

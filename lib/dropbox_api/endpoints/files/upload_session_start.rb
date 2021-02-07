@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class UploadSessionStart < DropboxApi::Endpoints::ContentUpload
     Method      = :post
-    Path        = '/2/files/upload_session/start'.freeze
+    Path        = '/2/files/upload_session/start'
     ResultType  = DropboxApi::Results::UploadSessionStart
     ErrorType   = nil
 

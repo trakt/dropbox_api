@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class Move < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/files/move'.freeze
+    Path        = '/2/files/move'
     ResultType  = DropboxApi::Metadata::Resource
     ErrorType   = DropboxApi::Errors::RelocationError
 

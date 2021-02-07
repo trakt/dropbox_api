@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class GetMetadata < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/files/get_metadata'.freeze
+    Path        = '/2/files/get_metadata'
     ResultType  = DropboxApi::Metadata::Resource
     ErrorType   = DropboxApi::Errors::GetMetadataError
 

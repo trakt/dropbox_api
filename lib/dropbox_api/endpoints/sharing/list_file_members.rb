@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class ListFileMembers < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/sharing/list_file_members'.freeze
+    Path        = '/2/sharing/list_file_members'
     ResultType  = DropboxApi::Results::SharedFileMembers
     ErrorType   = DropboxApi::Errors::SharingFileAccessError
 

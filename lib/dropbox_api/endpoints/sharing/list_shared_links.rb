@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class ListSharedLinks < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/sharing/list_shared_links'.freeze
+    Path        = '/2/sharing/list_shared_links'
     ResultType  = DropboxApi::Results::ListSharedLinksResult
     ErrorType   = DropboxApi::Errors::ListSharedLinksError
 

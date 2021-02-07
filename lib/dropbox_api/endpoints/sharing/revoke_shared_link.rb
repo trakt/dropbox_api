@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class RevokeSharedLink < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/sharing/revoke_shared_link'.freeze
+    Path        = '/2/sharing/revoke_shared_link'
     ResultType  = DropboxApi::Results::VoidResult
     ErrorType   = DropboxApi::Errors::RevokeSharedLinkError
 

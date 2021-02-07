@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Users
   class GetAccount < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/users/get_account'.freeze
+    Path        = '/2/users/get_account'
     ResultType  = DropboxApi::Metadata::BasicAccount
     ErrorType   = DropboxApi::Errors::GetAccountError
 

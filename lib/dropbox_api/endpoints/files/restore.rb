@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class Restore < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/files/restore'.freeze
+    Path        = '/2/files/restore'
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::RestoreError
 

@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class Download < DropboxApi::Endpoints::ContentDownload
     Method      = :post
-    Path        = '/2/files/download'.freeze
+    Path        = '/2/files/download'
     ResultType  = DropboxApi::Metadata::File
     ErrorType   = DropboxApi::Errors::DownloadError
 

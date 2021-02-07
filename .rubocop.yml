@@ -8,5 +8,8 @@ Style/HashSyntax:
 Style/FrozenStringLiteralComment:
   EnforcedStyle: always_true
 
+Style/RedundantFreeze:
+  Enabled: true
+
 Style/StringLiterals:
   EnforcedStyle: single_quotes

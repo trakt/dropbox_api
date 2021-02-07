@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Files
   class CopyBatchCheck < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/files/copy_batch/check_v2'.freeze
+    Path        = '/2/files/copy_batch/check_v2'
     ResultType  = DropboxApi::Results::RelocationBatchResult
     ErrorType   = DropboxApi::Errors::PollError
 

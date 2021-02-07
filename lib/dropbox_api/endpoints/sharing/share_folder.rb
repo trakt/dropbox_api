@@ -2,7 +2,7 @@
 module DropboxApi::Endpoints::Sharing
   class ShareFolder < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/sharing/share_folder'.freeze
+    Path        = '/2/sharing/share_folder'
     ResultType  = DropboxApi::Results::ShareFolderLaunch
     ErrorType   = DropboxApi::Errors::ShareFolderError
 
