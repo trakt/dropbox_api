@@ -20,6 +20,13 @@
 # regenerate the cassettes every now and then, but we don't need to do it in
 # every execution of the test suite.
 class DropboxScaffoldBuilder
+  def self.regenerate_all
+    public_instance_methods
+      .map(&:to_s)
+      .select { |method_name| method_name.start_with?('build') }
+      .each { |method_name| regenerate(method_name.sub('build_', '')) }
+  end
+
   def self.regenerate(endpoint_name)
     builder = new(endpoint_name)
     builder.clobber

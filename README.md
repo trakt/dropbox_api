@@ -172,6 +172,11 @@ would be the procedure to do so:
     DROPBOX_OAUTH_BEARER=YOUR_AUTH_BEARER rake test:build_scaffold[list_folder]
     ```
 
+    Note that you'll have to type `rake test:build_scaffold\[list_folder\]`
+    if you use `zsh`.
+
+    You can build all available scaffolds with just `rake test:build_scaffold`.
+
  3. Run the tests and the cassettes will be written:
 
     ```text
@@ -182,7 +187,7 @@ The OAuth bearer shouldn't have been recorded in the cassette and it should've
 been filtered. However, you may want to double check before pushing your
 updates to Github.
 
-Tip: You can simply run `export DROPBOX_OAUTH_BEARER=YOUR_AUTH_BEARER` at
+Tip: you can simply run `export DROPBOX_OAUTH_BEARER=YOUR_AUTH_BEARER` at
 the beginning of your work session so you don't need to prefix it in every
 command line.
 
