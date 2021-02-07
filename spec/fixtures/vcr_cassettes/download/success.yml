@@ -50,7 +50,7 @@ http_interactions:
       - '{"name": "file.txt", "path_lower": "/file.txt", "path_display": "/file.txt",
         "id": "id:evvfE6q6cK0AAAAAAAACKQ", "client_modified": "2016-10-22T08:41:34Z",
         "server_modified": "2016-10-22T08:41:34Z", "rev": "1ab624061bdd", "size":
-        14}'
+        12}'
       X-Server-Response-Time:
       - '227'
       X-Dropbox-Request-Id:
@@ -59,7 +59,7 @@ http_interactions:
       - noindex, nofollow, noimageindex
     body:
       encoding: UTF-8
-      string: "Viva Rusia!\n"
+      string: "Hola Leo!\n"
     http_version:
   recorded_at: Sun, 11 Dec 2016 11:39:25 GMT
 recorded_with: VCR 3.0.1
