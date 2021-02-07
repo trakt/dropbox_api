@@ -2,8 +2,8 @@
 module DropboxApi::Endpoints::Files
   class Search < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = '/2/files/search'
-    ResultType  = DropboxApi::Results::SearchResult
+    Path        = '/2/files/search_v2'
+    ResultType  = DropboxApi::Results::SearchV2Result
     ErrorType   = DropboxApi::Errors::SearchError
 
     include DropboxApi::OptionsValidator
@@ -13,32 +13,20 @@ module DropboxApi::Endpoints::Files
     # Note: Recent changes may not immediately be reflected in search results
     # due to a short delay in indexing.
     #
-    # @param query [String] The string to search for. The search string is
-    #   split on spaces into multiple tokens. For file name searching, the last
-    #   token is used for prefix matching (i.e. "bat c" matches "bat cave" but
-    #   not "batman car").
-    # @param path [String] The path in the user's Dropbox to search.
-    # @option options start [Numeric] The starting index within the search
-    #   results (used for paging). The default for this field is 0.
-    # @option options max_results [Numeric] The maximum number of search
-    #   results to return. The default for this field is 100.
-    # @option options mode [:filename, :filename_and_content, :deleted_filename]
-    #   The search mode. Note that searching file content is only
-    #   available for Dropbox Business accounts. The default is filename.
-    add_endpoint :search do |query, path = '', options = {}|
-      validate_options([
-        :start,
-        :max_results,
-        :mode
-      ], options)
-      options[:start] ||= 0
-      options[:max_results] ||= 100
-      options[:mode] ||= :filename
+    # @param query [String] The string to search for. May match across
+    #   multiple fields based on the request arguments.
+    # @param options [DropboxApi::Metadata::SearchOptions] Options for more
+    #   targeted search results. This field is optional.
+    # @param match_field_options [DropboxApi::Metadata::SearchMatchFieldOptions]
+    #   Options for search results match fields. This field is optional.
+    add_endpoint :search do |query, options = nil, match_field_options = nil|
+      params = { query: query }
 
-      perform_request options.merge({
-        query: query,
-        path: path
-      })
+      params[:options] = options.to_hash unless options.nil?
+
+      params[:match_field_options] = match_field_options.to_hash unless match_field_options.nil?
+
+      perform_request(params)
     end
   end
 end

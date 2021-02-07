@@ -1,23 +1,24 @@
 # frozen_string_literal: true
 module DropboxApi::Results
-  class SearchResult < DropboxApi::Results::Base
+  class SearchV2Result < DropboxApi::Results::Base
     # A list (possibly empty) of matches for the query.
     def matches
       @matches ||= @data['matches'].map do |match|
-        DropboxApi::Results::Search::Match.new match
+        DropboxApi::Metadata::SearchMatchV2.new match
       end
-    end
-
-    # Used for paging. Value to set the start argument to when calling search
-    # to fetch the next page of results.
-    def start
-      @data['start'].to_i
     end
 
     # Used for paging. If true, indicates there is another page of results
     # available that can be fetched by calling search again.
     def has_more?
       @data['more'].to_s == 'true'
+    end
+
+    # Pass the cursor into #search_continue to fetch the next page of results
+    # (not yet implemented).
+    # This field is optional.
+    def cursor
+      @data['cursor']
     end
   end
 end

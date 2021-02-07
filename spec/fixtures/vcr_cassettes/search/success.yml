@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.dropboxapi.com/2/files/search
+    uri: https://api.dropboxapi.com/2/files/search_v2
     body:
       encoding: UTF-8
-      string: '{"start":0,"max_results":100,"mode":"filename","query":"image.png","path":""}'
+      string: '{"query":"findable_file"}'
     headers:
       Authorization:
       - Bearer MOCK_AUTHORIZATION_BEARER
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v1.3.0
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -22,40 +22,38 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx
-      Date:
-      - Sat, 04 Jun 2016 08:36:26 GMT
-      Content-Type:
-      - application/json
-      Content-Length:
-      - '346'
-      Connection:
-      - keep-alive
       Cache-Control:
       - no-cache
+      Content-Disposition:
+      - attachment
+      Content-Security-Policy:
+      - sandbox
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 07 Feb 2021 10:30:26 GMT
       Pragma:
       - no-cache
-      Set-Cookie:
-      - gvc=NjQ4NjA3NTk0Njg0MzA1MjA3MzgxMDY2NDA0MTQ0MzcxMTAyNjQ%3D; expires=Thu, 03
-        Jun 2021 08:36:26 GMT; httponly; Path=/; secure
+      X-Content-Security-Policy:
+      - sandbox
       X-Content-Type-Options:
       - nosniff
-      X-Dropbox-Http-Protocol:
-      - None
       X-Frame-Options:
-      - SAMEORIGIN
+      - sameorigin
       X-Server-Response-Time:
-      - '156'
+      - '160'
+      X-Webkit-Csp:
+      - sandbox
+      Server:
+      - envoy
+      Vary:
+      - Accept-Encoding
       X-Dropbox-Request-Id:
-      - 0962978b76ee3f37ca90f918f3ad49b6
+      - a0b2671f184943e1916d17d69b4d5ce0
+      Transfer-Encoding:
+      - chunked
     body:
-      encoding: UTF-8
-      string: '{"matches": [{"match_type": {".tag": "filename"}, "metadata": {".tag":
-        "file", "name": "image.png", "path_lower": "/image.png", "path_display": "/image.png",
-        "id": "id:jVVdzRI3CnAAAAAAAAAAAQ", "client_modified": "2016-05-22T09:29:22Z",
-        "server_modified": "2016-06-04T08:36:02Z", "rev": "1a4524061bdd", "size":
-        77019}}], "more": false, "start": 1}'
-    http_version: 
-  recorded_at: Sat, 04 Jun 2016 08:36:26 GMT
-recorded_with: VCR 3.0.1
+      encoding: ASCII-8BIT
+      string: '{"has_more":false,"matches":[{"match_type":{".tag":"filename"},"metadata":{".tag":"metadata","metadata":{".tag":"file","client_modified":"2021-02-07T10:29:47Z","content_hash":"ddc458cb9f13e2e9f4b02a579cc752c8bbcbb7fdfd4c54faea8e98b7f4b80ea8","id":"id:L5U1_AOVa-QAAAAAAAA4sA","is_downloadable":true,"name":"findable_file.txt","path_display":"/dropbox_api_fixtures/search/findable_file.txt","path_lower":"/dropbox_api_fixtures/search/findable_file.txt","rev":"5babc88636b60043720ae","server_modified":"2021-02-07T10:29:48Z","size":4}}}]}'
+  recorded_at: Sun, 07 Feb 2021 10:30:27 GMT
+recorded_with: VCR 6.0.0

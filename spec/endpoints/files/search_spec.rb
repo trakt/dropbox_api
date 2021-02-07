@@ -5,16 +5,21 @@ describe DropboxApi::Client, '#search' do
   end
 
   it 'returns a list of matching results', cassette: 'search/success' do
-    result = @client.search('image.png')
+    result = @client.search('findable_file')
 
-    expect(result).to be_a(DropboxApi::Results::SearchResult)
-    file = result.matches.first.resource
-    expect(file.name).to eq('image.png')
+    expect(result).to be_a(DropboxApi::Results::SearchV2Result)
+    match = result.matches.first
+    expect(match.resource.name).to eq('findable_file.txt')
+    expect(match.match_type).to eq(:filename)
   end
 
-  it "raises an error if the file can't be found", cassette: 'search/not_found' do
-    expect {
-      @client.search('/image.png', '/bad_folder')
-    }.to raise_error(DropboxApi::Errors::NotFoundError)
+  it "raises an error if the file can't be found",
+     cassette: 'search/not_found' do
+    options = DropboxApi::Metadata::SearchOptions.new(
+      { 'path' => '/bad_folder' }
+    )
+
+    result = @client.search('/image.png', options)
+    expect(result.matches).to be_empty
   end
 end

@@ -28,10 +28,12 @@ module DropboxApi::Metadata
         object['.tag'].to_sym
       elsif @type == :boolean
         object.to_s == 'true'
-      elsif @type.ancestors.include? DropboxApi::Metadata::Base
+      elsif @type.ancestors.include?(DropboxApi::Metadata::Base) ||
+            @type.ancestors.include?(Array) ||
+            @type == DropboxApi::Metadata::Resource
         @type.new(object)
       else
-        raise NotImplementedError, "Can't cast `#{@type}`"
+        raise NotImplementedError, "Can't cast #{object} to `#{@type}`"
       end
     end
   end

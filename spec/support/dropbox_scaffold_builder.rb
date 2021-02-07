@@ -116,6 +116,10 @@ class DropboxScaffoldBuilder
     client.create_shared_link_with_settings("#{path_prefix}/shared_file.txt")
   end
 
+  def build_search
+    client.upload("#{path_prefix}/findable_file.txt", 'Moo.')
+  end
+
   # We have a prefix for each endpoint to avoid conflicts across them
   def path_prefix
     File.join PREFIX, @endpoint_name
