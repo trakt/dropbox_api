@@ -9,10 +9,10 @@ module DropboxApi::MiddleWare
     end
 
     def namespace_id
-      if options[:namespace_id].nil?
+      if @options[:namespace_id].nil?
         return nil
       else
-        return options[:namespace_id]
+        return @options[:namespace_id]
       end
     end
 
