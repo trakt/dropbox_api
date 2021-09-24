@@ -1,8 +1,21 @@
 # frozen_string_literal: true
 module DropboxApi
   class Client
-    def initialize(oauth_bearer = ENV['DROPBOX_OAUTH_BEARER'])
-      @connection_builder = ConnectionBuilder.new(oauth_bearer)
+    def initialize(
+      oauth_bearer = ENV['DROPBOX_OAUTH_BEARER'],
+      access_token: nil,
+      on_token_refreshed: nil
+    )
+      if access_token
+        @connection_builder = ConnectionBuilder.new(
+          access_token: access_token,
+          on_token_refreshed: on_token_refreshed
+        )
+      elsif oauth_bearer
+        @connection_builder = ConnectionBuilder.new(oauth_bearer)
+      else
+        raise ArgumentError, "Either oauth_bearer or access_token should be set"
+      end
     end
 
     def middleware

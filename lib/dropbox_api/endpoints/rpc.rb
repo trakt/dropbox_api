@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 module DropboxApi::Endpoints
   class Rpc < DropboxApi::Endpoints::Base
-    def initialize(builder)
-      @connection = builder.build('https://api.dropboxapi.com') do |c|
+    def build_connection
+      @connection = @builder.build('https://api.dropboxapi.com') do |c|
         c.response :decode_result
       end
     end

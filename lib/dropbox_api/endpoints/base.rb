@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 module DropboxApi::Endpoints
   class Base
+    def initialize(builder)
+      @builder = builder
+      build_connection
+    end
+
     def self.add_endpoint(name, &block)
       define_method(name, block)
       DropboxApi::Client.add_endpoint(name, self)
@@ -10,6 +15,14 @@ module DropboxApi::Endpoints
 
     def perform_request(params)
       process_response(get_response(params))
+    rescue DropboxApi::Errors::ExpiredAccessTokenError => e
+      if @builder.can_refresh_access_token?
+        @builder.refresh_access_token
+        build_connection
+        process_response(get_response(params))
+      else
+        raise e
+      end
     end
 
     def get_response(*args)
