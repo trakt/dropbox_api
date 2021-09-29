@@ -56,43 +56,114 @@ DropboxApi::Client.new
 #=> #<DropboxApi::Client ...>
 ```
 
-Note that setting an ENV variable is only a feasible choice if you're only
-using one account.
+The official documentation on the process to get an authorization code is
+[here](https://developers.dropbox.com/es-es/oauth-guide#implementing-oauth),
+it describes the two options listed below.
+
 
 #### Option A: Get your access token from the website
 
-The easiest way to obtain an access token is to get it from the Dropbox website.
-You just need to log in to Dropbox and refer to the *developers* section, go to
-*My apps* and select your application, you may need to create one if you
-haven't done so yet.
+For a quick test, you can obtain an access token from the App Console in
+[Dropbox's website](https://www.dropbox.com/developers/). Select from
+*My apps* your application, you may need to create one if you
+haven't done so yet. Under your application settings, find section
+*OAuth 2*, there is a button to generate an access token.
 
-Under your application settings, find section *OAuth 2*. You'll find a button
-to generate an access token.
+#### Option B: OAuth2 Code Flow
 
-#### Option B: Use `DropboxApi::Authenticator`
-
-You can obtain an authorization code with this library:
+This is typically what you will use in production, you can obtain an
+authorization code with a 3-step process:
 
 ```ruby
+# 1. Get an authorization URL.
 authenticator = DropboxApi::Authenticator.new(CLIENT_ID, CLIENT_SECRET)
-authenticator.authorize_url #=> "https://www.dropbox.com/..."
+authenticator.auth_code.authorize_url #=> "https://www.dropbox.com/..."
 
-# Now you need to open the authorization URL in your browser,
-# authorize the application and copy your code.
+# 2. Log into Dropbox and authorize your app. You need to open the
+# authorization URL in your browser.
 
-auth_bearer = authenticator.get_token(CODE) #=> #<OAuth2::AccessToken ...>`
-auth_bearer.token #=> "VofXAX8D..."
-# Keep this token, you'll need it to initialize a `DropboxApi::Client` object
+# 3. Exchange the authorization code for a reusable access token (not visible
+#    to the user).
+access_token = authenticator.auth_code.get_token(CODE) #=> #<OAuth2::AccessToken ...>`
+access_token.token #=> "VofXAX8D..."
+
+# Keep this token, you'll need it to initialize a `DropboxApi::Client` object:
+client = DropboxApi::Client.new(access_token: access_token)
+
+# For backwards compatibility, the following also works:
+client = DropboxApi::Client.new(access_token.token)
 ```
 
-#### Standard OAuth 2 flow
-
-This is what many web applications will use. The process is described in
-Dropbox's [OAuth guide]
-(https://www.dropbox.com/developers/reference/oauth-guide#oauth-2-on-the-web).
+##### Integration with Rails
 
 If you have a Rails application, you might be interested in this [setup
 guide](http://jesus.github.io/dropbox_api/file.rails_setup.html).
+
+
+##### Using refresh tokens
+
+Access tokens are short-lived by default (as of September 30th, 2021),
+applications that require long-lived access to the API without additional
+interaction with the user should use refresh tokens.
+
+The process is similar but a token refresh might seamlessly occur as you
+perform API calls. When this happens you'll need to store the
+new token hash if you want to continue using this session, you can use the
+`on_token_refreshed` callback to do this.
+
+```ruby
+# 1. Get an authorization URL, requesting offline access type.
+authenticator = DropboxApi::Authenticator.new(CLIENT_ID, CLIENT_SECRET)
+authenticator.auth_code.authorize_url(token_access_type: 'offline')
+
+# 2. Log into Dropbox and authorize your app. You need to open the
+#    authorization URL in your browser.
+
+# 3. Exchange the authorization code for a reusable access token
+access_token = authenticator.auth_code.get_token(CODE) #=> #<OAuth2::AccessToken ...>`
+
+# You can now use the access token to initialize a DropboxApi::Client, you
+# should also provide a callback function to store the updated access token
+# whenever it's refreshed.
+client = DropboxApi::Client.new(
+  access_token: access_token,
+  on_token_refreshed: lambda { |new_token_hash|
+    # token_hash is a serializable Hash, something like this:
+    # {
+    #   "uid"=>"440",
+    #   "token_type"=>"bearer",
+    #   "scope"=>"account_info.read account_info.write...",
+    #   "account_id"=>"dbid:AABOLtA1rT6rRK4vajKZ...",
+    #   :access_token=>"sl.A5Ez_CBsqJILhDawHlmXSoZEhLZ4nuLFVRs6AJ...",
+    #   :refresh_token=>"iMg4Me_oKYUAAAAAAAAAAapQixCgwfXOxuubCuK_...",
+    #   :expires_at=>1632948328
+    # }
+    SomewhereSafe.save(new_token_hash)
+  }
+)
+```
+
+Once you've gone through the process above, you can skip the steps that require
+user interaction in subsequent initializations of `DropboxApi::Client`. For
+example:
+
+```ruby
+# 1. Initialize an authenticator
+authenticator = DropboxApi::Authenticator.new(CLIENT_ID, CLIENT_SECRET)
+
+# 2. Retrieve the token hash you previously stored somewhere safe, you can use
+#    it to build a new access token.
+access_token = OAuth2::AccessToken.from_hash(authenticator, token_hash)
+
+# 3. You now have an access token, so you can initialize a client like you
+#    would normally:
+client = DropboxApi::Client.new(
+  access_token: access_token,
+  on_token_refreshed: lambda { |new_token_hash|
+    SomewhereSafe.save(new_token_hash)
+  }
+)
+```
 
 ### Performing API calls
 

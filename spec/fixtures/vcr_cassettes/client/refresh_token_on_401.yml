@@ -1,0 +1,175 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/list_folder
+    body:
+      encoding: UTF-8
+      string: '{"recursive":false,"include_media_info":false,"include_deleted":false,"path":""}'
+    headers:
+      Authorization:
+      - Bearer MOCK_ACCESS_TOKEN
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - sandbox allow-forms allow-scripts
+      Www-Authenticate:
+      - Bearer realm="Dropbox-API"
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - identity,gzip
+      Date:
+      - Wed, 29 Sep 2021 20:48:38 GMT
+      Server:
+      - envoy
+      Content-Length:
+      - '88'
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - 61d7208bfc8f4729ab932769bbffc2c8
+    body:
+      encoding: UTF-8
+      string: '{"error_summary": "expired_access_token/...", "error": {".tag": "expired_access_token"}}'
+  recorded_at: Wed, 29 Sep 2021 20:48:38 GMT
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/oauth2/token
+    body:
+      encoding: UTF-8
+      string: client_id=CLIENT_ID&client_secret=CLIENT_SECRET&grant_type=refresh_token&refresh_token=MOCK_REFRESH_TOKEN
+    headers:
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Server-Response-Time:
+      - '34'
+      Content-Type:
+      - text/javascript
+      Accept-Encoding:
+      - identity,gzip
+      Date:
+      - Wed, 29 Sep 2021 20:48:38 GMT
+      Server:
+      - envoy
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - 8f86f70b4f50487396cf524e8df83765
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"token_type": "bearer", "access_token": "MOCK_REFRESHED_ACCESS_TOKEN",
+        "expires_in": 14400}'
+  recorded_at: Wed, 29 Sep 2021 20:48:38 GMT
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/list_folder
+    body:
+      encoding: UTF-8
+      string: '{"recursive":false,"include_media_info":false,"include_deleted":false,"path":""}'
+    headers:
+      Authorization:
+      - Bearer MOCK_REFRESHED_ACCESS_TOKEN
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Server-Response-Time:
+      - '99'
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - identity,gzip
+      Date:
+      - Wed, 29 Sep 2021 20:48:38 GMT
+      Server:
+      - envoy
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - d130ea0765604bc5939453ffbce5a760
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"entries": [{".tag": "folder", "name": "PleaseLetMeTest''s shared
+        workspace", "path_lower": "/pleaseletmetest''s shared workspace", "path_display":
+        "/PleaseLetMeTest''s shared workspace", "id": "id:L5U1_AOVa-QAAAAAAAA3-g"},
+        {".tag": "folder", "name": "dropbox_api_fixtures", "path_lower": "/dropbox_api_fixtures",
+        "path_display": "/dropbox_api_fixtures", "id": "id:L5U1_AOVa-QAAAAAAAA3-w"},
+        {".tag": "folder", "name": "Create Batch", "path_lower": "/create batch",
+        "path_display": "/Create Batch", "id": "id:L5U1_AOVa-QAAAAAAAA4oQ"}, {".tag":
+        "folder", "name": "Create Batch 1", "path_lower": "/create batch 1", "path_display":
+        "/Create Batch 1", "id": "id:L5U1_AOVa-QAAAAAAAA4og"}, {".tag": "folder",
+        "name": "Create Batch 1 (1)", "path_lower": "/create batch 1 (1)", "path_display":
+        "/Create Batch 1 (1)", "id": "id:L5U1_AOVa-QAAAAAAAA4ow"}, {".tag": "folder",
+        "name": "arizona_baby", "path_lower": "/arizona_baby", "path_display": "/arizona_baby",
+        "id": "id:L5U1_AOVa-QAAAAAAAA4pA"}, {".tag": "folder", "name": "b.jpg", "path_lower":
+        "/b.jpg", "path_display": "/b.jpg", "id": "id:L5U1_AOVa-QAAAAAAAA4pQ"}, {".tag":
+        "folder", "name": "Homework", "path_lower": "/homework", "path_display": "/Homework",
+        "id": "id:L5U1_AOVa-QAAAAAAAA4qA"}, {".tag": "file", "name": "target.txt",
+        "path_lower": "/target.txt", "path_display": "/target.txt", "id": "id:L5U1_AOVa-QAAAAAAAA4pg",
+        "client_modified": "2021-02-07T01:09:05Z", "server_modified": "2021-02-07T01:09:05Z",
+        "rev": "5bab4b3222c52043720ae", "size": 22, "is_downloadable": true, "content_hash":
+        "2064faa877255c7097e19c8ce5daada411478d0bfb8ed57837eeaa53bd4a10b3"}, {".tag":
+        "file", "name": "file.zip", "path_lower": "/file.zip", "path_display": "/file.zip",
+        "id": "id:L5U1_AOVa-QAAAAAAAA4rQ", "client_modified": "2021-02-07T01:10:00Z",
+        "server_modified": "2021-02-07T01:11:10Z", "rev": "5bab4ba9864db043720ae",
+        "size": 1073741824, "is_downloadable": true, "content_hash": "0ade23b455a4127f8626e570875abdf248625c4df8246a9578e25f6d8bf0aed2"}],
+        "cursor": "AAEMXGRO5DnecQDu-j8p7QDOY5TXLDvoT3XLPTeCmOrZtIJW-HhdqTEVuZXe0vIAcn74onEW_W4g5DiowdJrfZJRl-8djP7KKTqK5FXXt0VHVfeC4WGFWqidh18HveyPvtDoM5VALkWABhaDJXS3t_t4CLVnha776YW1Dh-qPPlrT1r6WeASkYooXgaEWNhklZ8",
+        "has_more": false}'
+  recorded_at: Wed, 29 Sep 2021 20:48:39 GMT
+recorded_with: VCR 6.0.0
