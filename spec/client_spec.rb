@@ -33,5 +33,13 @@ module DropboxApi
         Faraday::Adapter::NetHttpPersistent
       ))
     end
+
+    it 'will raise on 401 if there is no refresh token', cassette: 'client/raise_on_401' do
+      client = Client.new("MOCK_EXPIRED_AUTHORIZATION_BEARER")
+
+      expect do
+        client.list_folder ""
+      end.to raise_error(DropboxApi::Errors::ExpiredAccessTokenError)
+    end
   end
 end
