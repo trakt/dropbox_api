@@ -1057,6 +1057,29 @@
         <li class="public ">
   <span class="summary_signature">
     
+      <a href="#search_continue-instance_method" title="#search_continue (instance method)">#<strong>search_continue</strong>(cursor)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>search:2.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
       <a href="#upload-instance_method" title="#upload (instance method)">#<strong>upload</strong>(path, content, options = {})  &#x21d2; Object </a>
     
 
@@ -1291,7 +1314,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(oauth_bearer = ENV[&#39;DROPBOX_OAUTH_BEARER&#39;])  &#x21d2; Client </a>
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(oauth_bearer = ENV[&#39;DROPBOX_OAUTH_BEARER&#39;], access_token: nil, on_token_refreshed: nil)  &#x21d2; Client </a>
     
 
     
@@ -1335,6 +1358,50 @@
 </li>
 
       
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#namespace_id-instance_method" title="#namespace_id (instance method)">#<strong>namespace_id</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#namespace_id=-instance_method" title="#namespace_id= (instance method)">#<strong>namespace_id=</strong>(value)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
     </ul>
   
 
@@ -1344,7 +1411,7 @@
     <div class="method_details first">
   <h3 class="signature first" id="initialize-instance_method">
   
-    #<strong>initialize</strong>(oauth_bearer = ENV[&#39;DROPBOX_OAUTH_BEARER&#39;])  &#x21d2; <tt><span class='object_link'><a href="" title="DropboxApi::Client (class)">Client</a></span></tt> 
+    #<strong>initialize</strong>(oauth_bearer = ENV[&#39;DROPBOX_OAUTH_BEARER&#39;], access_token: nil, on_token_refreshed: nil)  &#x21d2; <tt><span class='object_link'><a href="" title="DropboxApi::Client (class)">Client</a></span></tt> 
   
 
   
@@ -1369,13 +1436,39 @@
 
 4
 5
-6</pre>
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/dropbox_api/client.rb', line 4</span>
 
-<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_oauth_bearer'>oauth_bearer</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DROPBOX_OAUTH_BEARER</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span>
-  <span class='ivar'>@connection_builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ConnectionBuilder.html" title="DropboxApi::ConnectionBuilder (class)">ConnectionBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ConnectionBuilder.html#initialize-instance_method" title="DropboxApi::ConnectionBuilder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_oauth_bearer'>oauth_bearer</span><span class='rparen'>)</span>
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span>
+  <span class='id identifier rubyid_oauth_bearer'>oauth_bearer</span> <span class='op'>=</span> <span class='const'>ENV</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>DROPBOX_OAUTH_BEARER</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+  <span class='label'>access_token:</span> <span class='kw'>nil</span><span class='comma'>,</span>
+  <span class='label'>on_token_refreshed:</span> <span class='kw'>nil</span>
+<span class='rparen'>)</span>
+  <span class='kw'>if</span> <span class='id identifier rubyid_access_token'>access_token</span>
+    <span class='ivar'>@connection_builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ConnectionBuilder.html" title="DropboxApi::ConnectionBuilder (class)">ConnectionBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ConnectionBuilder.html#initialize-instance_method" title="DropboxApi::ConnectionBuilder#initialize (method)">new</a></span></span><span class='lparen'>(</span>
+      <span class='label'>access_token:</span> <span class='id identifier rubyid_access_token'>access_token</span><span class='comma'>,</span>
+      <span class='label'>on_token_refreshed:</span> <span class='id identifier rubyid_on_token_refreshed'>on_token_refreshed</span>
+    <span class='rparen'>)</span>
+  <span class='kw'>elsif</span> <span class='id identifier rubyid_oauth_bearer'>oauth_bearer</span>
+    <span class='ivar'>@connection_builder</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="ConnectionBuilder.html" title="DropboxApi::ConnectionBuilder (class)">ConnectionBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="ConnectionBuilder.html#initialize-instance_method" title="DropboxApi::ConnectionBuilder#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_oauth_bearer'>oauth_bearer</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='id identifier rubyid_raise'>raise</span> <span class='const'>ArgumentError</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Either oauth_bearer or access_token should be set</span><span class='tstring_end'>&quot;</span></span>
+  <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -4981,14 +5074,16 @@ contain any duplicate account IDs.</p>
 
 7
 8
-9</pre>
+9
+10</pre>
             </td>
             <td>
               <pre class="code"><span class="info file"># File 'spec/endpoints/users/get_current_account_spec.rb', line 12</span>
 
 <span class='id identifier rubyid_account'>account</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_get_current_account'>get_current_account</span>
 
-<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span><span class='id identifier rubyid_account'>account</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_be_a'>be_a</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Metadata.html" title="DropboxApi::Metadata (module)">Metadata</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Metadata/BasicAccount.html" title="DropboxApi::Metadata::BasicAccount (class)">BasicAccount</a></span></span><span class='rparen'>)</span></pre>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span><span class='id identifier rubyid_account'>account</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_be_a'>be_a</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Metadata.html" title="DropboxApi::Metadata (module)">Metadata</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Metadata/BasicAccount.html" title="DropboxApi::Metadata::BasicAccount (class)">BasicAccount</a></span></span><span class='rparen'>)</span>
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span><span class='id identifier rubyid_account'>account</span><span class='period'>.</span><span class='id identifier rubyid_root_info'>root_info</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_be_a'>be_a</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Metadata.html" title="DropboxApi::Metadata (module)">Metadata</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Metadata/UserRootInfo.html" title="DropboxApi::Metadata::UserRootInfo (class)">UserRootInfo</a></span></span><span class='rparen'>)</span></pre>
             </td>
           </tr>
         </table>
@@ -6721,6 +6816,87 @@ this is &quot;approximate&quot;, and more may be returned)</p>
         </table>
       </li>
     
+      <li>
+        works with a namespace_id
+        <table class="source_code test_code">
+          <tr>
+            <td>
+              <pre class="lines">
+
+
+45
+46</pre>
+            </td>
+            <td>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/files/list_folder_spec.rb', line 29</span>
+
+<span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_namespace_id'>namespace_id</span> <span class='op'>=</span> <span class='int'>70721710</span>
+<span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_list_folder'>list_folder</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/dropbox_api_fixtures</span><span class='tstring_end'>&#39;</span></span></pre>
+            </td>
+          </tr>
+        </table>
+      </li>
+    
+      <li>
+        fails with an invalid namespace ID
+        <table class="source_code test_code">
+          <tr>
+            <td>
+              <pre class="lines">
+
+
+50
+51
+52
+53
+54</pre>
+            </td>
+            <td>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/files/list_folder_spec.rb', line 29</span>
+
+<span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_namespace_id'>namespace_id</span> <span class='op'>=</span> <span class='int'>938429923</span>
+
+<span class='id identifier rubyid_expect'>expect</span> <span class='kw'>do</span>
+  <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_list_folder'>list_folder</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/dropbox_api_fixtures</span><span class='tstring_end'>&#39;</span></span>
+<span class='kw'>end</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_raise_error'>raise_error</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors.html" title="DropboxApi::Errors (module)">Errors</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Errors/HttpError.html" title="DropboxApi::Errors::HttpError (class)">HttpError</a></span></span><span class='rparen'>)</span></pre>
+            </td>
+          </tr>
+        </table>
+      </li>
+    
+      <li>
+        works if namespace ID is unset 
+        <table class="source_code test_code">
+          <tr>
+            <td>
+              <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65</pre>
+            </td>
+            <td>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/files/list_folder_spec.rb', line 29</span>
+
+<span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_namespace_id'>namespace_id</span> <span class='op'>=</span> <span class='int'>70721710</span>
+
+<span class='comment'># we expect this to use a namespace ID
+</span><span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_list_folder'>list_folder</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/dropbox_api_fixtures</span><span class='tstring_end'>&#39;</span></span>
+
+<span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_namespace_id'>namespace_id</span> <span class='op'>=</span> <span class='kw'>nil</span>
+<span class='comment'># we expect the next not to use any namespace ID
+</span><span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_list_folder'>list_folder</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/dropbox_api_fixtures</span><span class='tstring_end'>&#39;</span></span></pre>
+            </td>
+          </tr>
+        </table>
+      </li>
+    
   </ul>
 </div>
 
@@ -7894,12 +8070,12 @@ be suppressed by setting direct_only to true.</p>
       <pre class="lines">
 
 
-8
-9
-10</pre>
+21
+22
+23</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/dropbox_api/client.rb', line 8</span>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/client.rb', line 21</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_middleware'>middleware</span>
   <span class='ivar'>@connection_builder</span><span class='period'>.</span><span class='id identifier rubyid_middleware'>middleware</span>
@@ -8132,6 +8308,68 @@ default for this field is <code>false</code>.</p>
     <span class='label'>from_path:</span> <span class='id identifier rubyid_from'>from</span><span class='comma'>,</span>
     <span class='label'>to_path:</span> <span class='id identifier rubyid_to'>to</span>
   <span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="namespace_id-instance_method">
+  
+    #<strong>namespace_id</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3>
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/client.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_namespace_id'>namespace_id</span>
+  <span class='ivar'>@connection_builder</span><span class='period'>.</span><span class='id identifier rubyid_namespace_id'>namespace_id</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="namespace_id=-instance_method">
+  
+    #<strong>namespace_id=</strong>(value)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3>
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+25
+26
+27</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/client.rb', line 25</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_namespace_id='>namespace_id=</span><span class='lparen'>(</span><span class='id identifier rubyid_value'>value</span><span class='rparen'>)</span>
+  <span class='ivar'>@connection_builder</span><span class='period'>.</span><span class='id identifier rubyid_namespace_id'>namespace_id</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -9080,6 +9318,96 @@ targeted search results. This field is optional.</p>
 </div>
     
       <div class="method_details ">
+  <h3 class="signature " id="search_continue-instance_method">
+  
+    #<strong>search_continue</strong>(cursor)  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    <p>search:2. Used to fetch the next page of results.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>cursor</span>
+      
+      
+        <span class='type'>(<tt>String</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'><p>The cursor returned by your last call to</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div>
+<div class="tags">
+  <p class="tag_title">Specifications:</p>
+  <ul class="specs">
+    
+      <li>
+        returns a SearchResult
+        <table class="source_code test_code">
+          <tr>
+            <td>
+              <pre class="lines">
+
+
+15
+16
+17</pre>
+            </td>
+            <td>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/files/search_continue_spec.rb', line 19</span>
+
+<span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_search_continue'>search_continue</span><span class='lparen'>(</span><span class='ivar'>@cursor</span><span class='rparen'>)</span>
+
+<span class='id identifier rubyid_expect'>expect</span><span class='lparen'>(</span><span class='id identifier rubyid_result'>result</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_to'>to</span> <span class='id identifier rubyid_be_a'>be_a</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DropboxApi.html" title="DropboxApi (module)">DropboxApi</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Results.html" title="DropboxApi::Results (module)">Results</a></span></span><span class='op'>::</span><span class='const'><span class='object_link'><a href="Results/SearchV2Result.html" title="DropboxApi::Results::SearchV2Result (class)">SearchV2Result</a></span></span><span class='rparen'>)</span></pre>
+            </td>
+          </tr>
+        </table>
+      </li>
+    
+  </ul>
+</div>
+
+<table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+19
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/dropbox_api/endpoints/files/search_continue.rb', line 19</span>
+
+<span class='id identifier rubyid_add_endpoint'>add_endpoint</span> <span class='symbol'>:search_continue</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cursor'>cursor</span><span class='op'>|</span>
+  <span class='id identifier rubyid_perform_request'>perform_request</span> <span class='label'>cursor:</span> <span class='id identifier rubyid_cursor'>cursor</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
   <h3 class="signature " id="share_folder-instance_method">
   
     #<strong>share_folder</strong>(path, options = {})  &#x21d2; <tt><span class='object_link'><a href="Results/ShareFolderLaunch.html" title="DropboxApi::Results::ShareFolderLaunch (class)">DropboxApi::Results::ShareFolderLaunch</a></span></tt> 
@@ -10002,7 +10330,7 @@ this field is <code>false</code>.</p>
 11</pre>
             </td>
             <td>
-              <pre class="code"><span class="info file"># File 'spec/endpoints/virutal/upload_by_chunks_spec.rb', line 50</span>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/virtual/upload_by_chunks_spec.rb', line 50</span>
 
 <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_upload_by_chunks'>upload_by_chunks</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/file.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hello Dropbox!</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
 
@@ -10029,7 +10357,7 @@ this field is <code>false</code>.</p>
 20</pre>
             </td>
             <td>
-              <pre class="code"><span class="info file"># File 'spec/endpoints/virutal/upload_by_chunks_spec.rb', line 50</span>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/virtual/upload_by_chunks_spec.rb', line 50</span>
 
 <span class='id identifier rubyid_content'>content</span> <span class='op'>=</span> <span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_open'>open</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'><span class='object_link'><a href="../DropboxScaffoldBuilder.html" title="DropboxScaffoldBuilder (class)">DropboxScaffoldBuilder</a></span></span><span class='period'>.</span><span class='id identifier rubyid_fixtures_path'><span class='object_link'><a href="../DropboxScaffoldBuilder.html#fixtures_path-class_method" title="DropboxScaffoldBuilder.fixtures_path (method)">fixtures_path</a></span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>file.txt</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
 <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_upload_by_chunks'>upload_by_chunks</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/file_io.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_content'>content</span><span class='rparen'>)</span>
@@ -10059,7 +10387,7 @@ this field is <code>false</code>.</p>
 30</pre>
             </td>
             <td>
-              <pre class="code"><span class="info file"># File 'spec/endpoints/virutal/upload_by_chunks_spec.rb', line 50</span>
+              <pre class="code"><span class="info file"># File 'spec/endpoints/virtual/upload_by_chunks_spec.rb', line 50</span>
 
 <span class='id identifier rubyid_file'>file</span> <span class='op'>=</span> <span class='ivar'>@client</span><span class='period'>.</span><span class='id identifier rubyid_upload_by_chunks'>upload_by_chunks</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_path_prefix'>path_prefix</span><span class='embexpr_end'>}</span><span class='tstring_content'>/file.txt</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Hola Dropbox!</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='lbrace'>{</span>
   <span class='label'>autorename:</span> <span class='kw'>true</span><span class='comma'>,</span>
@@ -10863,9 +11191,9 @@ that you can use to continue the upload afterwards.</p>
 </div>
 
       <div id="footer">
-  Generated on Sun Feb  7 11:51:55 2021 by
+  Generated on Wed Sep 29 23:44:24 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.5.1).
+  0.9.26 (ruby-2.6.5).
 </div>
 
     </div>
