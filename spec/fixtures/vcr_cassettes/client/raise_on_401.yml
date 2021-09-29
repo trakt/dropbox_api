@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/list_folder
+    body:
+      encoding: UTF-8
+      string: '{"recursive":false,"include_media_info":false,"include_deleted":false,"path":""}'
+    headers:
+      Authorization:
+      - Bearer MOCK_EXPIRED_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Security-Policy:
+      - sandbox allow-forms allow-scripts
+      Www-Authenticate:
+      - Bearer realm="Dropbox-API"
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - identity,gzip
+      Date:
+      - Wed, 29 Sep 2021 17:44:28 GMT
+      Server:
+      - envoy
+      Content-Length:
+      - '85'
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - 97c6c02235b4468d9022c41e6a08b7d3
+    body:
+      encoding: UTF-8
+      string: '{"error_summary": "expired_access_token/", "error": {".tag": "expired_access_token"}}'
+  recorded_at: Wed, 29 Sep 2021 17:44:29 GMT
+recorded_with: VCR 6.0.0

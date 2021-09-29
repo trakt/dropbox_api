@@ -24,6 +24,11 @@ module DropboxApi::Endpoints
         # Status code 409 is "Endpoint-specific error". We need to look at
         # the response body to build an exception.
         build_result(raw_response.env[:api_result])
+      when 401
+        raise DropboxApi::Errors::ExpiredAccessTokenError.build(
+          raw_response.env[:api_result]['error_summary'],
+          raw_response.env[:api_result]['error']
+        )
       when 429
         error = DropboxApi::Errors::TooManyRequestsError.build(
           raw_response.env[:api_result]['error_summary'],
