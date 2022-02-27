@@ -5,10 +5,10 @@ http_interactions:
     uri: https://notify.dropboxapi.com/2/files/list_folder/longpoll
     body:
       encoding: UTF-8
-      string: '{"timeout":30,"cursor":"AAFToNAroSgzIMkMZsT88-VRF-iVwMmoEBwCreuyqURc4d7ctAOnAEKuHYzaldceDeUgemxXLm5jsKpcT_TBSm0x3yNMW5DALIDlLynBOvxL8E8k2w-EYL1BeJrP6o1ZW-ScH1fN-BDcp3zkPVYFHLySF3rjTSw2rv2U0fAfRl0XJceLVnXTpHxh8vs43EPjJUyZsMOhEm0GuJ5NiNrEob4Rtz3HdTdCoxbZtllD_LtgPoAdP-XNjq_qUtmZj08l6P6NSi2A4Qmum6d3y8DOWjX56-_oySBdXvxo5YgNEzHGHJ8BUbAxT20y3LKH0SWu3-l7s9642B5VvsZhX48Ti8R0tCuLevu27ikAmeYb-dLMRC_uDjSG8-0BBu8I3LdGux7lGOu6ki872kvko6FsKicvvcnOYhpIu3KqzfeSUQiPR-KXWJCT5vHX7dcLbKJUeRYxlQqqPRYGYXutWGcWmrdlNI3jL9_v12pHEpKK4vCWzX4S5T99KdHWVboRXUl5VvQ4qH8UxblbqGvm6NgC6iOm95qDIv-yf8jTRB1qYeWVDOPZT5rFfAXUY26uW7PFwZ2siu_xphvT--52ByxnGuR0TEVhYptdUrC9a3feMeDIygkyTLeH7q-WBCU7eFXiIvCXo1zGMaSFNmpYCnCyhGBqK70k1dR9ftMKo1xlRkIK4gM9pE-MWXVAk6ow1BG6SGtoHq624oNFDBPnOn_CBTdzUO9pvoFXkk3Oe-d6DMkRAXxzv4JUDqRtkyYqLq9cfIRJBExYBUD3nknF9iEAOoymYZad9kpQnmS4Oc2GtD8-mdk2WcV_rPuYd7lHFhYzJ3y0w_wipOHEfKEuBEoaflF7aIpFl3dLx31LuBeW4t5__Cnk4uZnw6fcTZ_P3DGx3q0tL4wPl-cCGz6A1AJIBZROlHPls51Oq45fyStU7AwS7vLfc_NWX-VOMtR5UxiFv7UC3dnaFSdN4Z2FQCW7fmHqCyXu6GKO536jo9tnT0eNqfxSTf7ztOKRjfh1o1euc8poKC-EnDUMYIl-EyJcYQ4XLUhroWpaKM8Us757j3ceIKXPYYqqXi60wFRzBlu_ufqttFG4wtPVqLxPjHAjgCzlDzyiJ7QmAmS2DNxx60Aw2J-fG9oHegLQVCHHE42LGt_uJeogBHMKQI1XF-XbslZ6Wo3PkF_Er8tU7jSue56AbTbCykYl9HR4ZCgdf9jAo7XUvCqrtVCspGV3HLj697wvK_rM-1MImEa9B7RJS3DbNSQ2vvuuoMLEGx5pj8DIreArUYSpyth1P1p2a63o4oka8f7M7peMUyfRRdXA3rLd2O3epvsi4V4PFrGcCeR_DfXwIIFVXmUnP0niL6fpKrfSKRgEO4QZFSTbr03IbSyJMg1FQ2RdKdLhiAREI17glfxLgVcvgbwTWi1RdreAToeOM3Iee3iT6SlMr_h5ASJ8crXVaQyZSYWw_TjsmsA2bCrhhOYhqDkVMrKkImCKWcFmluI5buUYOkazDJrr8n9Z-qx3dE2uhZS12iBkesqgxkk7nJ5Q2WoiCIbyaTJDjxZ69dX3xLq94zSfaHVxeehBTf8PE0W61Cq6b4grdut1QIB3YXrMJBHZU9cEbQyZwzl6Fz-BGtYy-JjCJA8MI-IppDg4kTeg2ot__m_WoeKU4iWyetLZ_UsfX9Y_XLNBpscQbOEjkxrIAFi9uZ0j7kl-Zu5hRkU_50UA3j5WPdpExZjNJcAPAZoey_Wh59wdCLmPeMzJO-Jb286oTj46ZP8FrrW0F8V9mAqZldY5MerQYI7JCK8I0uv5khaFXvFkk1UrMVW8j-17xJB5SoGNFrk6cPJgAtex5FnaefAotZN4DoC1kh595xRakiTNPsYH9vnxQiePHr9gPN4p6FpF1mFcImchjPWwZsLTPBI6E-Fp4KZW3Ll43p7_2-CJXR6lnVihKnOoCsyZ2QWKTtwqVYY82sv7EPHlyHf5KYZEAQMx2I3vZRNhIkYZyr3WjbB7uStRz74HgX2AfGrAXUJ0GrVM-UzNSSmccFjvRqZhHM57QmXAc0aNyb1Gef6a9EE0inSasTlU1jzrJd-ta2SXgqAtl2_uT2ml5lwOn_0EX4TZ_ayWTAA-bPJEOycni3CDezKIIN5HuycZ13aNhO_2v3TPCmXiBuM249AZViKCF5DLhi7cuTFsc_6YqABQGwXgVkXROxWpg6v0v4ZChh3dDKbNLXdmMJfQXDpk0Diy-nmBtKh2vfbeC1SoVMBFT68y7kO8Rrarg5U6yNozZ0a9qIQyQKnhZ1bgO6bQfJ9dz_edvhOSTDlnYJQJsoti-CHeIAhCofQQSL4vtfp_86GVLuiN1ryzwW3C90mM2o97kbPDOCQn-RK1rpagJ0griSWytHnVuuXlY6gWqa3hAP5RmI5VkaG94vEQgmu2TcjJEhUQUAw6KyxAWC499tiCJKk6QvVYVQfkVahltdOrt0OEK29DyGvfOimBkYkjDYTdYrV5Y1O7E_LkX5PxHl6PJnpDvuVbNtGvnnYpc1IfLDwigNY5hCERzRcCWUUl157KwsihrfpTo8q8_-gwryK0ryGs_IRjOf2I1GyPKD1hjiXIAW0PjSzNC1jRz9uvONNS9Jfq5Z1_jo0y_-y3k01IGljf9tya0x7NOzgGNJOPw4dCIAhJPZBCmyMfKJfFuSM-F3cVqHc5zLGYdoCniTcduCb91T0i8E8NgyoXQ_de3fujykMcJNbJAF6ufj_ap6bphDKhQzRadl6Scu5x1DzJEmJ1PENbQn-M5fePCgKebU6CvtNcglzxvYPFItHkONaq-1xFX-WIpFYtnvlPMyYUJu_zPg_RYwOh4h4BlasqtnIEuZukrDbFgu2Ryxa8cuucF0LxMYeHzMbj62OSeuW9dHl6ORFba-R5xfhOhDj8SiHE8ZuFDugvy3Y8gU3vvUiv25xDEgMxoSkp1v3AvxaK1z8sY95ExBC9B-N_HXrG1LEkdbx6FDB3YI3jnJ1n8D9l-WC9KaVu24yDrtezYiAGcCEaerPhu-qpcSsoKygpTFsll58yMhoElzeU0fomEjdx3Bie4zsxy85S-LHlvbuuZ7I6JFTSWIxjrcM7nlbWMP_zXP1DEzvS-PJZA7he9aJ9BnWs6m33uiuoYz9DfNs2JHpbtgfmgB6jnUo7UHeGj02P8Dlkxg"}'
+      string: '{"timeout":30,"cursor":"AAF2APSHjtbXJqAdZ2Pvpaquig0syveLl4XonPXAZgil94KoBDdJ_RV_JTrndD3akjPZsa5XiX9P_1YaZ_dSH0fyZ6ffoRZk2gJ_gcR8cYhtXr68L_py2WZ-qTx2RBxdvM_AxbChl7DXzS4hbvUOsKyvrWO0q7s0EESd3fbS9R360FgYEOjy8KqwPkPKU3pkZjZ-B-y37sQOFLm3b8cNpC2yx0BxkeUEP4Yja8LXf20741Jm5tZUA12pLGetQyIB-z4xv3kIwCb6d1JPy2I_cZvJ6BQpN85-ryfxMLrh-ieppw"}'
     headers:
       User-Agent:
-      - Faraday v0.9.2
+      - Faraday v1.3.0
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -20,27 +20,88 @@ http_interactions:
       code: 200
       message: OK
     headers:
-      Server:
-      - nginx
-      Date:
-      - Sun, 11 Dec 2016 11:49:28 GMT
-      Content-Type:
-      - application/json
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
-      X-Db-Timeout:
-      - '120'
-      Pragma:
-      - no-cache
       Cache-Control:
       - no-cache
+      Content-Type:
+      - application/json
+      Pragma:
+      - no-cache
+      X-Db-Timeout:
+      - '120'
+      Date:
+      - Sun, 27 Feb 2022 13:43:32 GMT
+      Content-Length:
+      - '17'
+      X-Dropbox-Response-Origin:
+      - remote
+      Server:
+      - envoy
       X-Dropbox-Request-Id:
-      - 131006a43b49b73cb0879792691b2df6
+      - 1a922e27fe7e4cf895bc682de72ce0ab
+    body:
+      encoding: UTF-8
+      string: '{"changes":true}
+
+        '
+  recorded_at: Sun, 27 Feb 2022 13:43:32 GMT
+- request:
+    method: post
+    uri: https://content.dropboxapi.com/2/files/upload
+    body:
+      encoding: UTF-8
+      string: Quack!
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v1.3.0
+      Dropbox-Api-Arg:
+      - '{"path":"/dropbox_api_fixtures/list_folder_longpoll/duck.txt"}'
+      Content-Type:
+      - application/octet-stream
+      Content-Length:
+      - '6'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Server-Response-Time:
+      - '832'
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - identity,gzip
+      Date:
+      - Sun, 27 Feb 2022 13:43:32 GMT
+      Server:
+      - envoy
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Robots-Tag:
+      - noindex, nofollow, noimageindex
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - 4c528e3a2e184c3ab669f13f39dfe53a
+      Transfer-Encoding:
+      - chunked
     body:
       encoding: ASCII-8BIT
-      string: '{"changes" : true}'
-    http_version: 
-  recorded_at: Sun, 11 Dec 2016 11:50:44 GMT
-recorded_with: VCR 3.0.1
+      string: '{"name": "duck.txt", "path_lower": "/dropbox_api_fixtures/list_folder_longpoll/duck.txt",
+        "path_display": "/dropbox_api_fixtures/list_folder_longpoll/duck.txt", "id":
+        "id:L5U1_AOVa-QAAAAAAAA4vA", "client_modified": "2022-02-27T13:43:32Z", "server_modified":
+        "2022-02-27T13:43:32Z", "rev": "5d9001e2a58b7043720ae", "size": 6, "is_downloadable":
+        true, "content_hash": "6a2d01bcadbad09a0b0aea75f2e1e0652da80a43c8c196ee0cd29cc268ef73a1"}'
+  recorded_at: Sun, 27 Feb 2022 13:43:32 GMT
+recorded_with: VCR 6.0.0

@@ -95,6 +95,10 @@ class DropboxScaffoldBuilder
     client.upload("#{path_prefix}/shared_folder/cow.txt", 'Moo.')
   end
 
+  def build_list_folder_longpoll
+    client.create_folder("#{path_prefix}")
+  end
+
   def build_upload
     # No need to set up anything
   end
