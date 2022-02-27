@@ -8,6 +8,9 @@ group :development do
   gem 'redcarpet'
   gem 'yard-tests-rspec', git: 'https://github.com/Jesus/yard-spec-plugin.git'
 
+  # Debugging
+  gem 'byebug'
+
   # Code linting
   gem 'rubocop', require: false
   gem 'rubocop-rspec', require: false
