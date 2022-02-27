@@ -27,6 +27,7 @@ module DropboxApi
         [
           DropboxApi::MiddleWare::PathRoot,
           MiddlewareStart,
+          Faraday::Request::Authorization,
           MiddlewareMiddle,
           MiddlewareEnd
         ],

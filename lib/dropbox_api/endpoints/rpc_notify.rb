@@ -3,7 +3,7 @@ module DropboxApi::Endpoints
   class RpcNotify < DropboxApi::Endpoints::Rpc
     def build_connection
       @connection = @builder.build('https://notify.dropboxapi.com') do |c|
-        c.headers.delete 'Authorization'
+        c.builder.handlers.delete(Faraday::Request::Authorization)
 
         c.response :decode_result
       end
