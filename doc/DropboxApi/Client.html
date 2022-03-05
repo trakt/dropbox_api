@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class DropboxApi::Client - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-add_endpoint">::add_endpoint</a>
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-middleware">#middleware</a>
+    
+    <li ><a href="#method-i-namespace_id">#namespace_id</a>
+    
+    <li ><a href="#method-i-namespace_id-3D">#namespace_id=</a>
+    
+    <li ><a href="#method-i-upload_by_chunks">#upload_by_chunks</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-DropboxApi::Client">
+  <h1 id="class-DropboxApi::Client" class="class">
+    class DropboxApi::Client
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-add_endpoint" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_endpoint</span><span
+            class="method-args">(name, endpoint)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>@!visibility private</p>
+          
+          
+
+          
+          <div class="method-source-code" id="add_endpoint-source">
+            <pre><span class="ruby-comment"># File lib/dropbox_api/client.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier ruby-title">add_endpoint</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">endpoint</span>)
+  <span class="ruby-identifier">define_method</span>(<span class="ruby-identifier">name</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">endpoint</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@connection_builder</span>).<span class="ruby-identifier">send</span>(<span class="ruby-identifier">name</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">args</span>, <span class="ruby-operator">&amp;</span><span class="ruby-identifier">block</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">( oauth_bearer = ENV[&#39;DROPBOX_OAUTH_BEARER&#39;], access_token: nil, on_token_refreshed: nil )</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/dropbox_api/client.rb, line 3</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(
+  <span class="ruby-identifier">oauth_bearer</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-string">&#39;DROPBOX_OAUTH_BEARER&#39;</span>],
+  <span class="ruby-value">access_token:</span> <span class="ruby-keyword">nil</span>,
+  <span class="ruby-value">on_token_refreshed:</span> <span class="ruby-keyword">nil</span>
+)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">access_token</span>
+    <span class="ruby-ivar">@connection_builder</span> = <span class="ruby-constant">ConnectionBuilder</span>.<span class="ruby-identifier">new</span>(
+      <span class="ruby-value">access_token:</span> <span class="ruby-identifier">access_token</span>,
+      <span class="ruby-value">on_token_refreshed:</span> <span class="ruby-identifier">on_token_refreshed</span>
+    )
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">oauth_bearer</span>
+    <span class="ruby-ivar">@connection_builder</span> = <span class="ruby-constant">ConnectionBuilder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">oauth_bearer</span>)
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Either oauth_bearer or access_token should be set&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-middleware" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">middleware</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="middleware-source">
+            <pre><span class="ruby-comment"># File lib/dropbox_api/client.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">middleware</span>
+  <span class="ruby-ivar">@connection_builder</span>.<span class="ruby-identifier">middleware</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-namespace_id" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">namespace_id</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="namespace_id-source">
+            <pre><span class="ruby-comment"># File lib/dropbox_api/client.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">namespace_id</span>
+  <span class="ruby-ivar">@connection_builder</span>.<span class="ruby-identifier">namespace_id</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-namespace_id-3D" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">namespace_id=</span><span
+            class="method-args">(value)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="namespace_id-3D-source">
+            <pre><span class="ruby-comment"># File lib/dropbox_api/client.rb, line 24</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">namespace_id=</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-ivar">@connection_builder</span>.<span class="ruby-identifier">namespace_id</span> = <span class="ruby-identifier">value</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-upload_by_chunks" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">upload_by_chunks</span><span
+            class="method-args">(path, content, options = {})</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Creates a new file using the *upload session* endpoints. You can use this
+method to upload files larger than 150 MB.</p>
+
+<p>@example</p>
+
+<pre class="ruby"><span class="ruby-identifier">client</span> = <span class="ruby-constant">DropboxApi</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span> <span class="ruby-string">&quot;large file.avi&quot;</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">client</span>.<span class="ruby-identifier">upload</span> <span class="ruby-string">&quot;/large file.avi&quot;</span>, <span class="ruby-identifier">file</span>
+  <span class="ruby-comment">#=&gt; #&lt;DropboxApi::Metadata::File: @name=&quot;large file.avi&quot; ...&gt;</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>@example</p>
+
+<pre class="ruby"><span class="ruby-identifier">client</span> = <span class="ruby-constant">DropboxApi</span><span class="ruby-operator">::</span><span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-identifier">client</span>.<span class="ruby-identifier">upload</span> <span class="ruby-string">&quot;/file.txt&quot;</span>, <span class="ruby-string">&quot;File contents...&quot;</span>, <span class="ruby-value">:mode</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-value">:add</span>
+<span class="ruby-comment">#=&gt; #&lt;DropboxApi::Metadata::File: @name=&quot;file (1).txt&quot; ...&gt;</span>
+</pre>
+
+<p>@param path [String] Path in the user&#39;s Dropbox to save the file.
+@param content The contents of the file that will be uploaded. This</p>
+
+<pre>could be the result of the `IO::read` method.</pre>
+
+<p>@option options mode [DropboxApi::Metadata::WriteMode] Selects what to</p>
+
+<pre>do if the file already exists. The default is `add`.</pre>
+
+<p>@option options autorename [Boolean] If there&#39;s a conflict, as
+determined</p>
+
+<pre>by `mode`, have the Dropbox server try to autorename the file to avoid
+conflict. The default for this field is `false`.</pre>
+
+<p>@option options client_modified [DateTime] The value to store as the</p>
+
+<pre>`client_modified` timestamp. Dropbox automatically records the time at
+which the file was written to the Dropbox servers. It can also record
+an additional timestamp, provided by Dropbox desktop clients, mobile
+clients, and API apps of when the file was actually created or
+modified.</pre>
+
+<p>@option options mute [Boolean] Normally, users are made aware of any</p>
+
+<pre>file modifications in their Dropbox account via notifications in the
+client software. If `true`, this tells the clients that this
+modification shouldn&#39;t result in a user notification. The default for
+this field is `false`.</pre>
+
+<p>@option options chunk_size [Numeric] The size of each upload chunk. It</p>
+
+<pre>defaults to 4 MiB.</pre>
+
+<p>@see <a href="Metadata/WriteMode.html">DropboxApi::Metadata::WriteMode</a></p>
+
+<p>@!group virtual</p>
+          
+          
+
+          
+          <div class="method-source-code" id="upload_by_chunks-source">
+            <pre><span class="ruby-comment"># File lib/dropbox_api/endpoints/virtual/upload_by_chunks.rb, line 40</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">upload_by_chunks</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span> = {})
+  <span class="ruby-identifier">content</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">content</span>) <span class="ruby-keyword">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+
+  <span class="ruby-identifier">uploader</span> = <span class="ruby-constant">DropboxApi</span><span class="ruby-operator">::</span><span class="ruby-constant">ChunkedUploader</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>, <span class="ruby-identifier">path</span>, <span class="ruby-identifier">content</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">start</span>
+  <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">upload</span>
+  <span class="ruby-identifier">uploader</span>.<span class="ruby-identifier">finish</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

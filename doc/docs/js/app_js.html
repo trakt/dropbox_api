@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>app.js - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../../LICENSE.html">LICENSE</a>
+  
+    <li><a href="../../README_md.html">README</a>
+  
+    <li><a href="../../RELEASING_md.html">RELEASING</a>
+  
+    <li><a href="../../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../../TODO_md.html">TODO</a>
+  
+    <li><a href="../../api_coverage_md.html">api_coverage</a>
+  
+    <li><a href="../../bin/setup.html">setup</a>
+  
+    <li><a href="../../docs/DropboxApi_html.html">DropboxApi.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Authenticator_html.html">Authenticator.html</a>
+  
+    <li><a href="../../docs/DropboxApi/ChunkedUploader_html.html">ChunkedUploader.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Client_html.html">Client.html</a>
+  
+    <li><a href="../../docs/DropboxApi/ConnectionBuilder_html.html">ConnectionBuilder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints_html.html">Endpoints.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Auth_html.html">Auth.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Auth/TokenRevoke_html.html">TokenRevoke.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Base_html.html">Base.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/ContentDownload_html.html">ContentDownload.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/ContentUpload_html.html">ContentUpload.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files_html.html">Files.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Copy_html.html">Copy.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CopyBatch_html.html">CopyBatch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CopyBatchCheck_html.html">CopyBatchCheck.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CopyReferenceGet_html.html">CopyReferenceGet.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CopyReferenceSave_html.html">CopyReferenceSave.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CreateFileRequest_html.html">CreateFileRequest.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CreateFolder_html.html">CreateFolder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CreateFolderBatch_html.html">CreateFolderBatch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/CreateFolderBatchCheck_html.html">CreateFolderBatchCheck.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Delete_html.html">Delete.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/DeleteBatch_html.html">DeleteBatch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/DeleteBatchCheck_html.html">DeleteBatchCheck.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Download_html.html">Download.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/GetMetadata_html.html">GetMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/GetPreview_html.html">GetPreview.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/GetTemporaryLink_html.html">GetTemporaryLink.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/GetThumbnail_html.html">GetThumbnail.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/GetThumbnailBatch_html.html">GetThumbnailBatch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/ListFolder_html.html">ListFolder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/ListFolderContinue_html.html">ListFolderContinue.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/ListFolderGetLatestCursor_html.html">ListFolderGetLatestCursor.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/ListFolderLongpoll_html.html">ListFolderLongpoll.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/ListRevisions_html.html">ListRevisions.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Move_html.html">Move.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/PermanentlyDelete_html.html">PermanentlyDelete.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Restore_html.html">Restore.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/SaveUrl_html.html">SaveUrl.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/SaveUrlCheckJobStatus_html.html">SaveUrlCheckJobStatus.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Search_html.html">Search.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/SearchContinue_html.html">SearchContinue.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/Upload_html.html">Upload.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/UploadSessionAppendV2_html.html">UploadSessionAppendV2.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/UploadSessionFinish_html.html">UploadSessionFinish.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Files/UploadSessionStart_html.html">UploadSessionStart.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Rpc_html.html">Rpc.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/RpcContent_html.html">RpcContent.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/RpcNotify_html.html">RpcNotify.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing_html.html">Sharing.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/AddFileMember_html.html">AddFileMember.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/AddFolderMember_html.html">AddFolderMember.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/CreateSharedLinkWithSettings_html.html">CreateSharedLinkWithSettings.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/GetSharedLinkMetadata_html.html">GetSharedLinkMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/ListFileMembers_html.html">ListFileMembers.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/ListFolderMembers_html.html">ListFolderMembers.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/ListSharedLinks_html.html">ListSharedLinks.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/RevokeSharedLink_html.html">RevokeSharedLink.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/ShareFolder_html.html">ShareFolder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Sharing/UnshareFile_html.html">UnshareFile.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Users_html.html">Users.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Users/GetAccount_html.html">GetAccount.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Users/GetAccountBatch_html.html">GetAccountBatch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Users/GetCurrentAccount_html.html">GetCurrentAccount.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Endpoints/Users/GetSpaceUsage_html.html">GetSpaceUsage.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors_html.html">Errors.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/AddFileMemberError_html.html">AddFileMemberError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/AddFolderMemberError_html.html">AddFolderMemberError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/AddMemberSelectorError_html.html">AddMemberSelectorError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/AlreadySharedError_html.html">AlreadySharedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/BadPathError_html.html">BadPathError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/BasicError_html.html">BasicError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CantCopySharedFolderError_html.html">CantCopySharedFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CantMoveFolderIntoItselfError_html.html">CantMoveFolderIntoItselfError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CantNestSharedFolderError_html.html">CantNestSharedFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CantShareOutsideTeamError_html.html">CantShareOutsideTeamError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ContainsSharedFolderError_html.html">ContainsSharedFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ConversionError_html.html">ConversionError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CreateFileRequestError_html.html">CreateFileRequestError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CreateFolderBatchError_html.html">CreateFolderBatchError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CreateFolderError_html.html">CreateFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CreateSharedLinkWithSettingsError_html.html">CreateSharedLinkWithSettingsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CursorClosedError_html.html">CursorClosedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/CursorNotClosedError_html.html">CursorNotClosedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/DeleteError_html.html">DeleteError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/DisallowedNameError_html.html">DisallowedNameError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/DisallowedSharedLinkPolicyError_html.html">DisallowedSharedLinkPolicyError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/DownloadError_html.html">DownloadError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/DownloadFailedError_html.html">DownloadFailedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/EmailUnverifiedError_html.html">EmailUnverifiedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ExpiredAccessTokenError_html.html">ExpiredAccessTokenError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/FileAncestorConflictError_html.html">FileAncestorConflictError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/FileConflictError_html.html">FileConflictError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/FileMemberActionError_html.html">FileMemberActionError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/FolderConflictError_html.html">FolderConflictError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/GetAccountError_html.html">GetAccountError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/GetCopyReferenceError_html.html">GetCopyReferenceError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/GetMetadataError_html.html">GetMetadataError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/GroupDeletedError_html.html">GroupDeletedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/GroupNotOnTeamError_html.html">GroupNotOnTeamError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/HttpError_html.html">HttpError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InProgressError_html.html">InProgressError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InsideAppFolderError_html.html">InsideAppFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InsideOsxPackageError_html.html">InsideOsxPackageError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InsidePublicFolderError_html.html">InsidePublicFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InsideSharedFolderError_html.html">InsideSharedFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InsufficientPlanError_html.html">InsufficientPlanError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InsufficientSpaceError_html.html">InsufficientSpaceError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InternalError_html.html">InternalError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidCommentError_html.html">InvalidCommentError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidCopyReferenceError_html.html">InvalidCopyReferenceError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidCursorError_html.html">InvalidCursorError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidDropboxIdError_html.html">InvalidDropboxIdError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidEmailError_html.html">InvalidEmailError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidFileError_html.html">InvalidFileError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidIdError_html.html">InvalidIdError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidMemberError_html.html">InvalidMemberError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidPathError_html.html">InvalidPathError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidRevisionError_html.html">InvalidRevisionError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidSettingsError_html.html">InvalidSettingsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/InvalidUrlError_html.html">InvalidUrlError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/IsAppFolderError_html.html">IsAppFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/IsFileError_html.html">IsFileError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/IsFolderError_html.html">IsFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/IsOsxPackageError_html.html">IsOsxPackageError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/IsPublicFolderError_html.html">IsPublicFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ListFolderContinueError_html.html">ListFolderContinueError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ListFolderError_html.html">ListFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ListFolderLongpollError_html.html">ListFolderLongpollError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ListRevisionsError_html.html">ListRevisionsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ListSharedLinksError_html.html">ListSharedLinksError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/LookupError_html.html">LookupError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/MalformedPathError_html.html">MalformedPathError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NoAccountError_html.html">NoAccountError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NoPermissionError_html.html">NoPermissionError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NoWritePermissionError_html.html">NoWritePermissionError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NotAMemberError_html.html">NotAMemberError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NotFileError_html.html">NotFileError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NotFolderError_html.html">NotFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/NotFoundError_html.html">NotFoundError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/PollError_html.html">PollError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/PreviewError_html.html">PreviewError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/RateLimitError_html.html">RateLimitError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/RelocationBatchEntryError_html.html">RelocationBatchEntryError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/RelocationError_html.html">RelocationError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/RestoreError_html.html">RestoreError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/RestrictedContentError_html.html">RestrictedContentError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/RevokeSharedLinkError_html.html">RevokeSharedLinkError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SaveCopyReferenceError_html.html">SaveCopyReferenceError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SaveUrlError_html.html">SaveUrlError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SearchError_html.html">SearchError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SettingsError_html.html">SettingsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ShareFolderError_html.html">ShareFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharePathError_html.html">SharePathError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharedFolderAccessError_html.html">SharedFolderAccessError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharedLinkAccessDeniedError_html.html">SharedLinkAccessDeniedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharedLinkAlreadyExistsError_html.html">SharedLinkAlreadyExistsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharedLinkError_html.html">SharedLinkError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharedLinkMalformedError_html.html">SharedLinkMalformedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharedLinkNotFoundError_html.html">SharedLinkNotFoundError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharingFileAccessError_html.html">SharingFileAccessError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/SharingUserError_html.html">SharingUserError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TeamFolderError_html.html">TeamFolderError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TeamPolicyDisallowsMemberPolicyError_html.html">TeamPolicyDisallowsMemberPolicyError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ThumbnailBatchError_html.html">ThumbnailBatchError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/ThumbnailError_html.html">ThumbnailError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TooManyFilesError_html.html">TooManyFilesError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TooManyMembersError_html.html">TooManyMembersError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TooManyPendingInvitesError_html.html">TooManyPendingInvitesError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TooManyRequestsError_html.html">TooManyRequestsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TooManySharedFolderTargetsError_html.html">TooManySharedFolderTargetsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/TooManyWriteOperationsError_html.html">TooManyWriteOperationsError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnmountedError_html.html">UnmountedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnshareFileError_html.html">UnshareFileError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnsupportedContentError_html.html">UnsupportedContentError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnsupportedExtensionError_html.html">UnsupportedExtensionError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnsupportedImageError_html.html">UnsupportedImageError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnsupportedLinkTypeError_html.html">UnsupportedLinkTypeError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UnverifiedDropboxId_html.html">UnverifiedDropboxId.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UploadError_html.html">UploadError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UploadSessionFinishError_html.html">UploadSessionFinishError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UploadSessionLookupError_html.html">UploadSessionLookupError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UploadSessionOffsetError_html.html">UploadSessionOffsetError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/UploadWriteFailedError_html.html">UploadWriteFailedError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/WriteConflictError_html.html">WriteConflictError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Errors/WriteError_html.html">WriteError.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata_html.html">Metadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/AccessLevel_html.html">AccessLevel.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/AddFileMemberResult_html.html">AddFileMemberResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/AddMember_html.html">AddMember.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Base_html.html">Base.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/BasicAccount_html.html">BasicAccount.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/CommitInfo_html.html">CommitInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Deleted_html.html">Deleted.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Dimensions_html.html">Dimensions.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Field_html.html">Field.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/File_html.html">File.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileCategoriesList_html.html">FileCategoriesList.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileCategory_html.html">FileCategory.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileExtensionsList_html.html">FileExtensionsList.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileLinkMetadata_html.html">FileLinkMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileMemberAction_html.html">FileMemberAction.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileRequest_html.html">FileRequest.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FileStatus_html.html">FileStatus.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Folder_html.html">Folder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FolderLinkMetadata_html.html">FolderLinkMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/FolderSharingInfo_html.html">FolderSharingInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/LinkPermissions_html.html">LinkPermissions.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Location_html.html">Location.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MediaInfo_html.html">MediaInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MediaMetadata_html.html">MediaMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Member_html.html">Member.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MemberAction_html.html">MemberAction.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MemberActionList_html.html">MemberActionList.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MemberPermission_html.html">MemberPermission.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MemberPermissionList_html.html">MemberPermissionList.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/MetadataV2_html.html">MetadataV2.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Name_html.html">Name.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/NamespaceId_html.html">NamespaceId.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/ParentFolderAccessInfo_html.html">ParentFolderAccessInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/PhotoMetadata_html.html">PhotoMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Resource_html.html">Resource.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/RootInfo_html.html">RootInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SearchMatchFieldOptions_html.html">SearchMatchFieldOptions.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SearchMatchTypeV2_html.html">SearchMatchTypeV2.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SearchMatchV2_html.html">SearchMatchV2.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SearchOptions_html.html">SearchOptions.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SearchOrderBy_html.html">SearchOrderBy.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SharedFolder_html.html">SharedFolder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SharedFolderPolicy_html.html">SharedFolderPolicy.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SharedLink_html.html">SharedLink.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SharedLinkMetadata_html.html">SharedLinkMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SpaceAllocation_html.html">SpaceAllocation.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/SpaceUsage_html.html">SpaceUsage.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Tag_html.html">Tag.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/Team_html.html">Team.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/TeamMemberInfo_html.html">TeamMemberInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/TeamRootInfo_html.html">TeamRootInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/ThumbnailBatchResultData_html.html">ThumbnailBatchResultData.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/ThumbnailBatchResultEntry_html.html">ThumbnailBatchResultEntry.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/UploadSessionCursor_html.html">UploadSessionCursor.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/UserRootInfo_html.html">UserRootInfo.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/VideoMetadata_html.html">VideoMetadata.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Metadata/WriteMode_html.html">WriteMode.html</a>
+  
+    <li><a href="../../docs/DropboxApi/MiddleWare_html.html">MiddleWare.html</a>
+  
+    <li><a href="../../docs/DropboxApi/MiddleWare/DecodeResult_html.html">DecodeResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/MiddleWare/PathRoot_html.html">PathRoot.html</a>
+  
+    <li><a href="../../docs/DropboxApi/MiddleWare/Stack_html.html">Stack.html</a>
+  
+    <li><a href="../../docs/DropboxApi/OptionsValidator_html.html">OptionsValidator.html</a>
+  
+    <li><a href="../../docs/DropboxApi/ResultBuilder_html.html">ResultBuilder.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results_html.html">Results.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/AddFileMemberResultList_html.html">AddFileMemberResultList.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/Base_html.html">Base.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/BasicAccountBatch_html.html">BasicAccountBatch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/CopyBatchResult_html.html">CopyBatchResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/CreateFolderBatchResult_html.html">CreateFolderBatchResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/CreateFolderBatchResultEntry_html.html">CreateFolderBatchResultEntry.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/DeleteBatchResult_html.html">DeleteBatchResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/DeleteBatchResultEntry_html.html">DeleteBatchResultEntry.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/GetCopyReferenceResult_html.html">GetCopyReferenceResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/GetTemporaryLinkResult_html.html">GetTemporaryLinkResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/GetThumbnailBatchResult_html.html">GetThumbnailBatchResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/ListFolderGetLatestCursorResult_html.html">ListFolderGetLatestCursorResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/ListFolderLongpollResult_html.html">ListFolderLongpollResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/ListFolderResult_html.html">ListFolderResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/ListRevisionsResult_html.html">ListRevisionsResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/ListSharedLinksResult_html.html">ListSharedLinksResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/RelocationBatchResult_html.html">RelocationBatchResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/RelocationBatchResultEntry_html.html">RelocationBatchResultEntry.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SaveCopyReferenceResult_html.html">SaveCopyReferenceResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SaveUrlJobStatus_html.html">SaveUrlJobStatus.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SaveUrlResult_html.html">SaveUrlResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/Search_html.html">Search.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/Search/Match_html.html">Match.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SearchResult_html.html">SearchResult.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SearchV2Result_html.html">SearchV2Result.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/ShareFolderLaunch_html.html">ShareFolderLaunch.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SharedFileMembers_html.html">SharedFileMembers.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/SharedFolderMembers_html.html">SharedFolderMembers.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/UploadSessionStart_html.html">UploadSessionStart.html</a>
+  
+    <li><a href="../../docs/DropboxApi/Results/VoidResult_html.html">VoidResult.html</a>
+  
+    <li><a href="../../docs/DropboxScaffoldBuilder_html.html">DropboxScaffoldBuilder.html</a>
+  
+    <li><a href="../../docs/_index_html.html">_index.html</a>
+  
+    <li><a href="../../docs/class_list_html.html">class_list.html</a>
+  
+    <li><a href="../../docs/css/common_css.html">common.css</a>
+  
+    <li><a href="../../docs/css/full_list_css.html">full_list.css</a>
+  
+    <li><a href="../../docs/css/style_css.html">style.css</a>
+  
+    <li><a href="../../docs/file_README_html.html">file.README.html</a>
+  
+    <li><a href="../../docs/file_api_coverage_html.html">file.api_coverage.html</a>
+  
+    <li><a href="../../docs/file_rails_setup_html.html">file.rails_setup.html</a>
+  
+    <li><a href="../../docs/file_list_html.html">file_list.html</a>
+  
+    <li><a href="../../docs/frames_html.html">frames.html</a>
+  
+    <li><a href="../../docs/index_html.html">index.html</a>
+  
+    <li><a href="../../docs/js/app_js.html">app.js</a>
+  
+    <li><a href="../../docs/js/full_list_js.html">full_list.js</a>
+  
+    <li><a href="../../docs/js/jquery_js.html">jquery.js</a>
+  
+    <li><a href="../../docs/method_list_html.html">method_list.html</a>
+  
+    <li><a href="../../docs/top-level-namespace_html.html">top-level-namespace.html</a>
+  
+    <li><a href="../../dropbox_api_gemspec.html">dropbox_api.gemspec</a>
+  
+    <li><a href="../../rails_setup_md.html">rails_setup</a>
+  
+    <li><a href="../../spec/fixtures/file_txt.html">file</a>
+  
+    <li><a href="../../yardoc/templates/default/fulldoc/html/css/common_css.html">common.css</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page docs/js/app.js">
+
+<p>(function() {</p>
+
+<p>var localStorage = {}, sessionStorage = {}; try { localStorage =
+window.localStorage; } catch (e) { } try { sessionStorage =
+window.sessionStorage; } catch (e) { }</p>
+
+<p>function createSourceLinks() {</p>
+
+<pre>$(&#39;.method_details_list .source_code&#39;).
+    before(&quot;&lt;span class=&#39;showSource&#39;&gt;[&lt;a href=&#39;#&#39; class=&#39;toggleSource&#39;&gt;View source&lt;/a&gt;]&lt;/span&gt;&quot;);
+$(&#39;.toggleSource&#39;).toggle(function() {
+   $(this).parent().nextAll(&#39;.source_code&#39;).slideDown(100);
+   $(this).text(&quot;Hide source&quot;);
+},
+function() {
+    $(this).parent().nextAll(&#39;.source_code&#39;).slideUp(100);
+    $(this).text(&quot;View source&quot;);
+});</pre>
+
+<p>}</p>
+
+<p>function createDefineLinks() {</p>
+
+<pre>var tHeight = 0;
+$(&#39;.defines&#39;).after(&quot; &lt;a href=&#39;#&#39; class=&#39;toggleDefines&#39;&gt;more...&lt;/a&gt;&quot;);
+$(&#39;.toggleDefines&#39;).toggle(function() {
+    tHeight = $(this).parent().prev().height();
+    $(this).prev().css(&#39;display&#39;, &#39;inline&#39;);
+    $(this).parent().prev().height($(this).parent().height());
+    $(this).text(&quot;(less)&quot;);
+},
+function() {
+    $(this).prev().hide();
+    $(this).parent().prev().height(tHeight);
+    $(this).text(&quot;more...&quot;);
+});</pre>
+
+<p>}</p>
+
+<p>function createFullTreeLinks() {</p>
+
+<pre>var tHeight = 0;
+$(&#39;.inheritanceTree&#39;).toggle(function() {
+    tHeight = $(this).parent().prev().height();
+    $(this).parent().toggleClass(&#39;showAll&#39;);
+    $(this).text(&quot;(hide)&quot;);
+    $(this).parent().prev().height($(this).parent().height());
+},
+function() {
+    $(this).parent().toggleClass(&#39;showAll&#39;);
+    $(this).parent().prev().height(tHeight);
+    $(this).text(&quot;show all&quot;);
+});</pre>
+
+<p>}</p>
+
+<p>function searchFrameButtons() {</p>
+
+<pre>$(&#39;.full_list_link&#39;).click(function() {
+  toggleSearchFrame(this, $(this).attr(&#39;href&#39;));
+  return false;
+});
+window.addEventListener(&#39;message&#39;, function(e) {
+  if (e.data === &#39;navEscape&#39;) {
+    $(&#39;#nav&#39;).slideUp(100);
+    $(&#39;#search a&#39;).removeClass(&#39;active inactive&#39;);
+    $(window).focus();
+  }
+});
+
+$(window).resize(function() {
+  if ($(&#39;#search:visible&#39;).length === 0) {
+    $(&#39;#nav&#39;).removeAttr(&#39;style&#39;);
+    $(&#39;#search a&#39;).removeClass(&#39;active inactive&#39;);
+    $(window).focus();
+  }
+});</pre>
+
+<p>}</p>
+
+<p>function toggleSearchFrame(id, link) {</p>
+
+<pre>var frame = $(&#39;#nav&#39;);
+$(&#39;#search a&#39;).removeClass(&#39;active&#39;).addClass(&#39;inactive&#39;);
+if (frame.attr(&#39;src&#39;) === link &amp;&amp; frame.css(&#39;display&#39;) !== &quot;none&quot;) {
+  frame.slideUp(100);
+  $(&#39;#search a&#39;).removeClass(&#39;active inactive&#39;);
+}
+else {
+  $(id).addClass(&#39;active&#39;).removeClass(&#39;inactive&#39;);
+  if (frame.attr(&#39;src&#39;) !== link) frame.attr(&#39;src&#39;, link);
+  frame.slideDown(100);
+}</pre>
+
+<p>}</p>
+
+<p>function linkSummaries() {</p>
+
+<pre>$(&#39;.summary_signature&#39;).click(function() {
+  document.location = $(this).find(&#39;a&#39;).attr(&#39;href&#39;);
+});</pre>
+
+<p>}</p>
+
+<p>function summaryToggle() {</p>
+
+<pre>$(&#39;.summary_toggle&#39;).click(function(e) {
+  e.preventDefault();
+  localStorage.summaryCollapsed = $(this).text();
+  $(&#39;.summary_toggle&#39;).each(function() {
+    $(this).text($(this).text() == &quot;collapse&quot; ? &quot;expand&quot; : &quot;collapse&quot;);
+    var next = $(this).parent().parent().nextAll(&#39;ul.summary&#39;).first();
+    if (next.hasClass(&#39;compact&#39;)) {
+      next.toggle();
+      next.nextAll(&#39;ul.summary&#39;).first().toggle();
+    }
+    else if (next.hasClass(&#39;summary&#39;)) {
+      var list = $(&#39;&lt;ul class=&quot;summary compact&quot; /&gt;&#39;);
+      list.html(next.html());
+      list.find(&#39;.summary_desc, .note&#39;).remove();
+      list.find(&#39;a&#39;).each(function() {
+        $(this).html($(this).find(&#39;strong&#39;).html());
+        $(this).parent().html($(this)[0].outerHTML);
+      });
+      next.before(list);
+      next.toggle();
+    }
+  });
+  return false;
+});
+if (localStorage.summaryCollapsed == &quot;collapse&quot;) {
+  $(&#39;.summary_toggle&#39;).first().click();
+} else { localStorage.summaryCollapsed = &quot;expand&quot;; }</pre>
+
+<p>}</p>
+
+<p>function constantSummaryToggle() {</p>
+
+<pre>$(&#39;.constants_summary_toggle&#39;).click(function(e) {
+  e.preventDefault();
+  localStorage.summaryCollapsed = $(this).text();
+  $(&#39;.constants_summary_toggle&#39;).each(function() {
+    $(this).text($(this).text() == &quot;collapse&quot; ? &quot;expand&quot; : &quot;collapse&quot;);
+    var next = $(this).parent().parent().nextAll(&#39;dl.constants&#39;).first();
+    if (next.hasClass(&#39;compact&#39;)) {
+      next.toggle();
+      next.nextAll(&#39;dl.constants&#39;).first().toggle();
+    }
+    else if (next.hasClass(&#39;constants&#39;)) {
+      var list = $(&#39;&lt;dl class=&quot;constants compact&quot; /&gt;&#39;);
+      list.html(next.html());
+      list.find(&#39;dt&#39;).each(function() {
+         $(this).addClass(&#39;summary_signature&#39;);
+         $(this).text( $(this).text().split(&#39;=&#39;)[0]);
+        if ($(this).has(&quot;.deprecated&quot;).length) {
+           $(this).addClass(&#39;deprecated&#39;);
+        };
+      });
+      // Add the value of the constant as &quot;Tooltip&quot; to the summary object
+      list.find(&#39;pre.code&#39;).each(function() {
+        console.log($(this).parent());
+        var dt_element = $(this).parent().prev();
+        var tooltip = $(this).text();
+        if (dt_element.hasClass(&quot;deprecated&quot;)) {
+           tooltip = &#39;Deprecated. &#39; + tooltip;
+        };
+        dt_element.attr(&#39;title&#39;, tooltip);
+      });
+      list.find(&#39;.docstring, .tags, dd&#39;).remove();
+      next.before(list);
+      next.toggle();
+    }
+  });
+  return false;
+});
+if (localStorage.summaryCollapsed == &quot;collapse&quot;) {
+  $(&#39;.constants_summary_toggle&#39;).first().click();
+} else { localStorage.summaryCollapsed = &quot;expand&quot;; }</pre>
+
+<p>}</p>
+
+<p>function generateTOC() {</p>
+
+<pre>if ($(&#39;#filecontents&#39;).length === 0) return;
+var _toc = $(&#39;&lt;ol class=&quot;top&quot;&gt;&lt;/ol&gt;&#39;);
+var show = false;
+var toc = _toc;
+var counter = 0;
+var tags = [&#39;h2&#39;, &#39;h3&#39;, &#39;h4&#39;, &#39;h5&#39;, &#39;h6&#39;];
+var i;
+var curli;
+if ($(&#39;#filecontents h1&#39;).length &gt; 1) tags.unshift(&#39;h1&#39;);
+for (i = 0; i &lt; tags.length; i++) { tags[i] = &#39;#filecontents &#39; + tags[i]; }
+var lastTag = parseInt(tags[0][1], 10);
+$(tags.join(&#39;, &#39;)).each(function() {
+  if ($(this).parents(&#39;.method_details .docstring&#39;).length != 0) return;
+  if (this.id == &quot;filecontents&quot;) return;
+  show = true;
+  var thisTag = parseInt(this.tagName[1], 10);
+  if (this.id.length === 0) {
+    var proposedId = $(this).attr(&#39;toc-id&#39;);
+    if (typeof(proposedId) != &quot;undefined&quot;) this.id = proposedId;
+    else {
+      var proposedId = $(this).text().replace(/[^a-z0-9-]/ig, &#39;_&#39;);
+      if ($(&#39;#&#39; + proposedId).length &gt; 0) { proposedId += counter; counter++; }
+      this.id = proposedId;
+    }
+  }
+  if (thisTag &gt; lastTag) {
+    for (i = 0; i &lt; thisTag - lastTag; i++) {
+      if ( typeof(curli) == &quot;undefined&quot; ) {
+        curli = $(&#39;&lt;li/&gt;&#39;);
+        toc.append(curli);
+      }
+      toc = $(&#39;&lt;ol/&gt;&#39;);
+      curli.append(toc);
+      curli = undefined;
+    }
+  }
+  if (thisTag &lt; lastTag) {
+    for (i = 0; i &lt; lastTag - thisTag; i++) {
+      toc = toc.parent();
+      toc = toc.parent();
+    }
+  }
+  var title = $(this).attr(&#39;toc-title&#39;);
+  if (typeof(title) == &quot;undefined&quot;) title = $(this).text();
+  curli =$(&#39;&lt;li&gt;&lt;a href=&quot;#&#39; + this.id + &#39;&quot;&gt;&#39; + title + &#39;&lt;/a&gt;&lt;/li&gt;&#39;); 
+  toc.append(curli);
+  lastTag = thisTag;
+});
+if (!show) return;
+html = &#39;&lt;div id=&quot;toc&quot;&gt;&lt;p class=&quot;title hide_toc&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;strong&gt;Table of Contents&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&#39;;
+$(&#39;#content&#39;).prepend(html);
+$(&#39;#toc&#39;).append(_toc);
+$(&#39;#toc .hide_toc&#39;).toggle(function() {
+  $(&#39;#toc .top&#39;).slideUp(&#39;fast&#39;);
+  $(&#39;#toc&#39;).toggleClass(&#39;hidden&#39;);
+  $(&#39;#toc .title small&#39;).toggle();
+}, function() {
+  $(&#39;#toc .top&#39;).slideDown(&#39;fast&#39;);
+  $(&#39;#toc&#39;).toggleClass(&#39;hidden&#39;);
+  $(&#39;#toc .title small&#39;).toggle();
+});</pre>
+
+<p>}</p>
+
+<p>function navResizeFn(e) {</p>
+
+<pre>if (e.which !== 1) {
+  navResizeFnStop();
+  return;
+}
+
+sessionStorage.navWidth = e.pageX.toString();
+$(&#39;.nav_wrap&#39;).css(&#39;width&#39;, e.pageX);
+$(&#39;.nav_wrap&#39;).css(&#39;-ms-flex&#39;, &#39;inherit&#39;);</pre>
+
+<p>}</p>
+
+<p>function navResizeFnStop() {</p>
+
+<pre>$(window).unbind(&#39;mousemove&#39;, navResizeFn);
+window.removeEventListener(&#39;message&#39;, navMessageFn, false);</pre>
+
+<p>}</p>
+
+<p>function navMessageFn(e) {</p>
+
+<pre>if (e.data.action === &#39;mousemove&#39;) navResizeFn(e.data.event);
+if (e.data.action === &#39;mouseup&#39;) navResizeFnStop();</pre>
+
+<p>}</p>
+
+<p>function navResizer() {</p>
+
+<pre>$(&#39;#resizer&#39;).mousedown(function(e) {
+  e.preventDefault();
+  $(window).mousemove(navResizeFn);
+  window.addEventListener(&#39;message&#39;, navMessageFn, false);
+});
+$(window).mouseup(navResizeFnStop);
+
+if (sessionStorage.navWidth) {
+  navResizeFn({which: 1, pageX: parseInt(sessionStorage.navWidth, 10)});
+}</pre>
+
+<p>}</p>
+
+<p>function navExpander() {</p>
+
+<pre>var done = false, timer = setTimeout(postMessage, 500);
+function postMessage() {
+  if (done) return;
+  clearTimeout(timer);
+  var opts = { action: &#39;expand&#39;, path: pathId };
+  document.getElementById(&#39;nav&#39;).contentWindow.postMessage(opts, &#39;*&#39;);
+  done = true;
+}
+
+window.addEventListener(&#39;message&#39;, function(event) {
+  if (event.data === &#39;navReady&#39;) postMessage();
+  return false;
+}, false);</pre>
+
+<p>}</p>
+
+<p>function mainFocus() {</p>
+
+<pre>var hash = window.location.hash;
+if (hash !== &#39;&#39; &amp;&amp; $(hash)[0]) {
+  $(hash)[0].scrollIntoView();
+}
+
+setTimeout(function() { $(&#39;#main&#39;).focus(); }, 10);</pre>
+
+<p>}</p>
+
+<p>function navigationChange() {</p>
+
+<pre>// This works around the broken anchor navigation with the YARD template.
+window.onpopstate = function() {
+  var hash = window.location.hash;
+  if (hash !== &#39;&#39; &amp;&amp; $(hash)[0]) {
+    $(hash)[0].scrollIntoView();
+  }
+};</pre>
+
+<p>}</p>
+
+<p>$(document).ready(function() {</p>
+
+<pre class="ruby"><span class="ruby-identifier">navResizer</span>();
+<span class="ruby-identifier">navExpander</span>();
+<span class="ruby-identifier">createSourceLinks</span>();
+<span class="ruby-identifier">createDefineLinks</span>();
+<span class="ruby-identifier">createFullTreeLinks</span>();
+<span class="ruby-identifier">searchFrameButtons</span>();
+<span class="ruby-identifier">linkSummaries</span>();
+<span class="ruby-identifier">summaryToggle</span>();
+<span class="ruby-identifier">constantSummaryToggle</span>();
+<span class="ruby-identifier">generateTOC</span>();
+<span class="ruby-identifier">mainFocus</span>();
+<span class="ruby-identifier">navigationChange</span>();
+</pre>
+
+<p>});</p>
+
+<p>})();</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.0.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
