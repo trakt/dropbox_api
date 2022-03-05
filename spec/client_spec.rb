@@ -1,5 +1,8 @@
 # frozen_string_literal: true
-require 'faraday/net_http_persistent'
+if Gem::Requirement.new('>= 2.0').satisfied_by? Gem.loaded_specs['faraday'].version
+  require 'faraday/net_http_persistent'
+end
+
 
 module DropboxApi
   describe Client do
